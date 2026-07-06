@@ -1,0 +1,50 @@
+---
+import type { Lang } from '../i18n/utils';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = (s: Record<string, string> | string) => typeof s === 'string' ? s : s[lang] || s.pt || '';
+
+const tr = translations.transport as any;
+const items = tr.items as any[];
+---
+
+<section class="bg-[color:var(--color-mist)] py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)]">04 — {t(tr.sectionNum)}</div>
+        <h2 class="font-display text-4xl md:text-5xl mt-4 leading-tight" set:html={t(tr.heading)} />
+        <p class="mt-6 text-[color:var(--color-moss)]/80">{t(tr.subtitle)}</p>
+      </div>
+
+      <div class="md:col-span-8 space-y-4">
+        {items.map((item: any) => (
+          <div class="rounded-3xl bg-white p-7 border border-black/5">
+            <div class="flex items-start gap-5">
+              <div class="text-4xl">{item.icon}</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-baseline gap-4 flex-wrap">
+                  <h3 class="font-display text-2xl">{t(item.title)}</h3>
+                  {item.meta && <span class="text-[color:var(--color-emerald)] font-medium">{item.meta}</span>}
+                </div>
+                {item.details && item.details.length === 1 ? (
+                  <p class="mt-4 text-[color:var(--color-moss)]" set:html={t(item.details[0].text)} />
+                ) : (
+                  <ul class="mt-4 space-y-2 text-[color:var(--color-moss)]">
+                    {item.details?.map((d: any) => (
+                      <li>{d.icon ? `${d.icon} ` : ''}<span set:html={t(d.text)} /></li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

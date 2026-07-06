@@ -1,0 +1,52 @@
+---
+import '../../styles/global.css';
+import { LANGUAGES } from '../../i18n/utils';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import Marquee from '../../components/Marquee.astro';
+import Overview from '../../components/Overview.astro';
+import Highlights from '../../components/Highlights.astro';
+import PracticalInfo from '../../components/PracticalInfo.astro';
+import Transport from '../../components/Transport.astro';
+import Encyclopedia from '../../components/Encyclopedia.astro';
+import Gallery from '../../components/Gallery.astro';
+import Reviews from '../../components/Reviews.astro';
+import Surrounding from '../../components/Surrounding.astro';
+import Faq from '../../components/Faq.astro';
+import Footer from '../../components/Footer.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { translations } from '../../i18n/translations';
+import type { Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+// Expose translations globally
+(globalThis as any).__translations = translations;
+
+const t = (s: Record<string, string> | string) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
+const meta = translations.meta as any;
+const title = t(meta.title);
+const description = t(meta.description);
+---
+
+<BaseLayout lang={lang} title={title} description={description}>
+  <Nav lang={lang} />
+  <Hero lang={lang} />
+  <Marquee />
+  <Overview lang={lang} />
+  <Highlights lang={lang} />
+  <PracticalInfo lang={lang} />
+  <Transport lang={lang} />
+  <Encyclopedia lang={lang} />
+  <Gallery lang={lang} />
+  <Reviews lang={lang} />
+  <Surrounding lang={lang} />
+  <Faq lang={lang} />
+  <Footer lang={lang} />
+  <StructuredData lang={lang} />
+</BaseLayout>

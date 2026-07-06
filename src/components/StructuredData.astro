@@ -1,0 +1,40 @@
+---
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const descMap: Record<Lang, string> = {
+  zh: '伊瓜苏瀑布巴西侧 1.2 公里全景栈道，直达魔鬼之喉观景台。',
+  en: 'The 1.2 km panoramic boardwalk on the Brazilian side of Iguaçu Falls, reaching the Devil\'s Throat catwalk.',
+  es: 'El sendero panorámico de 1,2 km en el lado brasileño de las Cataratas del Iguazú.',
+  pt: 'A trilha panorâmica de 1,2 km no lado brasileiro das Cataratas do Iguaçu.',
+};
+
+const __tourist = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: 'Trilha das Cataratas Brasil',
+  description: descMap[lang],
+  image: 'https://images.unsplash.com/photo-1590060766972-88f22d68f2ff',
+  address: { '@type': 'PostalAddress', addressLocality: 'Foz do Igua\u00e7u', addressRegion: 'PR', addressCountry: 'BR' },
+  geo: { '@type': 'GeoCoordinates', latitude: -25.6953, longitude: -54.4367 },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '8954' },
+  openingHours: 'Mo-Su 09:00-16:00',
+};
+
+const __faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Is the trail physically demanding?', acceptedAnswer: { '@type': 'Answer', text: 'Not at all. Just 1.2 km on paved, gently graded paths — friendly to all ages.' } },
+    { '@type': 'Question', name: 'Brazil side vs Argentina side?', acceptedAnswer: { '@type': 'Answer', text: 'Brazil delivers panoramic views; Argentina puts you inside the falls.' } },
+    { '@type': 'Question', name: "What's the best time to visit?", acceptedAnswer: { '@type': 'Answer', text: '9 AM opening beats the crowds. 2–4 PM has the best sun angle for rainbows.' } },
+    { '@type': 'Question', name: 'Do I need a visa to cross to Argentina?', acceptedAnswer: { '@type': 'Answer', text: 'Depends on your passport. Chinese passport holders with US/Canada/Schengen visas can use AVE.' } },
+  ],
+};
+---
+
+<Fragment set:html={'<script type="application/ld+json">' + JSON.stringify(__tourist) + '</script><script type="application/ld+json">' + JSON.stringify(__faq) + '</script>'} />

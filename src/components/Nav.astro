@@ -1,0 +1,43 @@
+---
+import type { Lang } from '../i18n/utils';
+import { LANGUAGES, LANG_LABELS } from '../i18n/utils';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = (s: Record<string, string> | string) => typeof s === 'string' ? s : s[lang] || s.pt || '';
+const nav = translations.nav as any;
+---
+
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-[rgba(247,243,234,.75)] border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href={`/${lang}/`} class="flex items-center gap-2">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M3 20c3-6 6-6 9 0 3-6 6-6 9 0" stroke="#1F3B34" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 14c4-9 12-9 16 0" stroke="#2F6B4E" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="font-display font-semibold tracking-tight">Cataratas · BR</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm text-[color:var(--color-moss)]">
+      <a class="link-underline" href={`/${lang}/#overview`}>{t(nav.overview)}</a>
+      <a class="link-underline" href={`/${lang}/#highlights`}>{t(nav.highlights)}</a>
+      <a class="link-underline" href={`/${lang}/#practical`}>{t(nav.guide)}</a>
+      <a class="link-underline" href={`/${lang}/#reviews`}>{t(nav.reviews)}</a>
+      <a class="link-underline" href={`/${lang}/#faq`}>FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-1 text-xs bg-white/60 border border-black/10 rounded-full p-1">
+      {LANGUAGES.map((l) => (
+        <a
+          href={`/${l}/`}
+          class={`lang-btn px-2.5 py-1 rounded-full ${l === lang ? 'active' : ''}`}
+        >
+          {LANG_LABELS[l]}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>

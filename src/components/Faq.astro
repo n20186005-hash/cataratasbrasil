@@ -1,0 +1,30 @@
+---
+import type { Lang } from '../i18n/utils';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = (s: Record<string, string> | string) => typeof s === 'string' ? s : s[lang] || s.pt || '';
+
+const fq = translations.faq as any;
+const items = fq.items as any[];
+---
+
+<section id="faq" class="max-w-4xl mx-auto px-6 py-24 md:py-32">
+  <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)] text-center">09 — FAQ</div>
+  <h2 class="font-display text-4xl md:text-6xl mt-4 text-center mb-14">{t(fq.heading)}</h2>
+
+  <div class="space-y-3">
+    {items.map((item: any) => (
+      <details class="group rounded-2xl border border-black/10 bg-white p-6">
+        <summary class="cursor-pointer flex justify-between items-center gap-4 list-none">
+          <span class="font-display text-xl">{t(item.q)}</span>
+          <span class="faq-plus text-2xl text-[color:var(--color-emerald)]">+</span>
+        </summary>
+        <p class="mt-4 text-[color:var(--color-moss)] leading-relaxed">{t(item.a)}</p>
+      </details>
+    ))}
+  </div>
+</section>
