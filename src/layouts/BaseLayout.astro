@@ -1,19 +1,9 @@
 ---
 import type { Lang } from '../i18n/utils';
 import { LANG_LABELS, LANGUAGES } from '../i18n/utils';
-import { translations } from '../i18n/translations';
 
-interface Props {
-  lang: Lang;
-  title: string;
-  description: string;
-}
-
+interface Props { lang: Lang; title: string; description: string; }
 const { lang, title, description } = Astro.props;
-
-// Expose translations globally for t() helper
-(globalThis as any).__translations = translations;
-
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const alternates = LANGUAGES.map((l) => {
   const path = Astro.url.pathname.replace(`/${lang}`, `/${l}`);
@@ -23,14 +13,11 @@ const alternates = LANGUAGES.map((l) => {
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  {alternates.map((a) => (
-    <link rel="alternate" hreflang={a.lang} href={a.href} />
-  ))}
+  {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
@@ -40,7 +27,5 @@ const alternates = LANGUAGES.map((l) => {
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
 </head>
-<body>
-  <slot />
-</body>
+<body><slot /></body>
 </html>

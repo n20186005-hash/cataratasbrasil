@@ -1,16 +1,10 @@
 ---
 import type { Lang } from '../i18n/utils';
-import { translations } from '../i18n/translations';
-
-interface Props {
-  lang: Lang;
-}
+import { hero } from '../i18n/translations';
+interface Props { lang: Lang; }
 const { lang } = Astro.props;
-const t = (s: Record<string, string> | string) => typeof s === 'string' ? s : s[lang] || s.pt || '';
-
-const hero = translations.hero as any;
+const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
 ---
-
 <section id="top" class="hero-bg relative min-h-[100vh] flex items-end pt-24" style="background-image: linear-gradient(180deg, rgba(11,31,26,.15) 0%, rgba(11,31,26,.55) 55%, rgba(11,31,26,.85) 100%), url('/gallery/trilha-das-cataratas-brasil (1).jpg')">
   <div class="rain absolute inset-0"></div>
   <div class="relative max-w-7xl mx-auto px-6 pb-16 w-full text-white">
@@ -19,18 +13,13 @@ const hero = translations.hero as any;
       <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Mata Atlântica</span>
       <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Garganta do Diabo</span>
     </div>
-
-    <h1 class="font-display font-semibold leading-[0.95] tracking-tight text-5xl md:text-7xl lg:text-8xl max-w-5xl" set:html={t(hero.title)} />
-
-    <p class="mt-6 max-w-2xl text-white/85 text-lg md:text-xl leading-relaxed">
-      {t(hero.subtitle)}
-    </p>
-
+    <h1 class="font-display font-semibold leading-[0.95] tracking-tight text-5xl md:text-7xl lg:text-8xl max-w-5xl" set:html={_(hero.title)} />
+    <p class="mt-6 max-w-2xl text-white/85 text-lg md:text-xl leading-relaxed">{_(hero.subtitle)}</p>
     <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
-      <div><div class="num-display text-4xl md:text-5xl">4.9</div><div class="text-xs uppercase tracking-widest text-white/70">8,954 {t(hero.statReviews)}</div></div>
-      <div><div class="num-display text-4xl md:text-5xl">1.2<span class="text-lg">km</span></div><div class="text-xs uppercase tracking-widest text-white/70">{t(hero.statLength)}</div></div>
-      <div><div class="num-display text-4xl md:text-5xl">275</div><div class="text-xs uppercase tracking-widest text-white/70">{t(hero.statFalls)}</div></div>
-      <div><div class="num-display text-4xl md:text-5xl">1,500<span class="text-lg">m³/s</span></div><div class="text-xs uppercase tracking-widest text-white/70">{t(hero.statFlow)}</div></div>
+      <div><div class="num-display text-4xl md:text-5xl">4.9</div><div class="text-xs uppercase tracking-widest text-white/70">8,954 {_(hero.statReviews)}</div></div>
+      <div><div class="num-display text-4xl md:text-5xl">1.2<span class="text-lg">km</span></div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statLength)}</div></div>
+      <div><div class="num-display text-4xl md:text-5xl">275</div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statFalls)}</div></div>
+      <div><div class="num-display text-4xl md:text-5xl">1,500<span class="text-lg">m³/s</span></div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statFlow)}</div></div>
     </div>
   </div>
 </section>
