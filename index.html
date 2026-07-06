@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trilha das Cataratas Brasil · 伊瓜苏瀑布震撼观景步道</title>
+<meta name="description" content="伊瓜苏瀑布巴西侧步道 (Trilha das Cataratas) 官方级别游览指南：全景视角、魔鬼之喉、雨林生态、交通与门票、9 条真实评价、常见问题。" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1F1A;
+    --moss:#1F3B34;
+    --emerald:#2F6B4E;
+    --sun:#E8B14B;
+    --mist:#EDF3EF;
+    --cream:#F7F3EA;
+  }
+  html,body{background:var(--cream); color:var(--ink); font-family:'Inter',system-ui,sans-serif;}
+  .font-display{font-family:'Fraunces',serif; font-optical-sizing:auto;}
+  .hero-bg{
+    background-image:
+      linear-gradient(180deg, rgba(11,31,26,.15) 0%, rgba(11,31,26,.55) 55%, rgba(11,31,26,.85) 100%),
+      url('https://images.unsplash.com/photo-1590060766972-88f22d68f2ff?auto=format&fit=crop&w=2400&q=80');
+    background-size:cover; background-position:center;
+  }
+  .grain{
+    background-image: radial-gradient(rgba(11,31,26,.06) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .divider-wave{
+    background: radial-gradient(circle at 50% 100%, var(--cream) 24%, transparent 24.5%) 0 0/40px 40px;
+  }
+  .chip{border:1px solid rgba(31,59,52,.25); backdrop-filter:blur(6px);}
+  .link-underline{background-image:linear-gradient(currentColor,currentColor); background-size:0 1px; background-repeat:no-repeat; background-position:0 100%; transition: background-size .3s;}
+  .link-underline:hover{background-size:100% 1px;}
+  details[open] .plus{transform:rotate(45deg);}
+  .plus{transition:transform .25s;}
+  .marquee{ display:flex; gap:3rem; animation: scroll 40s linear infinite; }
+  @keyframes scroll { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .card-hover{ transition: transform .4s ease, box-shadow .4s ease;}
+  .card-hover:hover{ transform:translateY(-4px); box-shadow: 0 20px 40px -20px rgba(11,31,26,.25);}
+  .rain::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background: repeating-linear-gradient(105deg, rgba(255,255,255,.08) 0 1px, transparent 1px 6px);
+    mix-blend-mode:overlay;
+  }
+  /* language switcher */
+  .lang-btn.active{background:var(--ink); color:var(--cream);}
+  [data-i18n]{ }
+  html:not([data-lang="zh"]) [data-lang-only="zh"]{display:none;}
+  html:not([data-lang="en"]) [data-lang-only="en"]{display:none;}
+  html:not([data-lang="es"]) [data-lang-only="es"]{display:none;}
+  html:not([data-lang="pt"]) [data-lang-only="pt"]{display:none;}
+  .num-display{font-family:'Fraunces',serif; font-weight:600; letter-spacing:-.02em;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-[rgba(247,243,234,.75)] border-b border-black/5">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 20c3-6 6-6 9 0 3-6 6-6 9 0" stroke="#1F3B34" stroke-width="2" stroke-linecap="round"/><path d="M4 14c4-9 12-9 16 0" stroke="#2F6B4E" stroke-width="2" stroke-linecap="round"/></svg>
+      <span class="font-display font-semibold tracking-tight">Cataratas · BR</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm text-[color:var(--moss)]">
+      <a class="link-underline" href="#overview" data-lang-only="zh">概览</a><a class="link-underline" href="#overview" data-lang-only="en">Overview</a><a class="link-underline" href="#overview" data-lang-only="es">Visión</a><a class="link-underline" href="#overview" data-lang-only="pt">Visão</a>
+      <a class="link-underline" href="#highlights" data-lang-only="zh">亮点</a><a class="link-underline" href="#highlights" data-lang-only="en">Highlights</a><a class="link-underline" href="#highlights" data-lang-only="es">Destacados</a><a class="link-underline" href="#highlights" data-lang-only="pt">Destaques</a>
+      <a class="link-underline" href="#practical" data-lang-only="zh">游览指南</a><a class="link-underline" href="#practical" data-lang-only="en">Guide</a><a class="link-underline" href="#practical" data-lang-only="es">Guía</a><a class="link-underline" href="#practical" data-lang-only="pt">Guia</a>
+      <a class="link-underline" href="#reviews" data-lang-only="zh">评价</a><a class="link-underline" href="#reviews" data-lang-only="en">Reviews</a><a class="link-underline" href="#reviews" data-lang-only="es">Reseñas</a><a class="link-underline" href="#reviews" data-lang-only="pt">Avaliações</a>
+      <a class="link-underline" href="#faq">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-1 text-xs bg-white/60 border border-black/10 rounded-full p-1">
+      <button class="lang-btn active px-2.5 py-1 rounded-full" data-set-lang="zh">中</button>
+      <button class="lang-btn px-2.5 py-1 rounded-full" data-set-lang="en">EN</button>
+      <button class="lang-btn px-2.5 py-1 rounded-full" data-set-lang="es">ES</button>
+      <button class="lang-btn px-2.5 py-1 rounded-full" data-set-lang="pt">PT</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero-bg relative min-h-[100vh] flex items-end pt-24">
+  <div class="rain absolute inset-0"></div>
+  <div class="relative max-w-7xl mx-auto px-6 pb-16 w-full text-white">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">UNESCO World Heritage</span>
+      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Mata Atlântica</span>
+      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Garganta do Diabo</span>
+    </div>
+    <h1 class="font-display font-semibold leading-[0.95] tracking-tight text-5xl md:text-7xl lg:text-8xl max-w-5xl">
+      <span data-lang-only="zh">伊瓜苏瀑布<br/><span class="italic text-[color:var(--sun)]">震撼观景</span>步道</span>
+      <span data-lang-only="en">Where the forest<br/><span class="italic text-[color:var(--sun)]">meets the roar</span>.</span>
+      <span data-lang-only="es">Donde la selva<br/><span class="italic text-[color:var(--sun)]">encuentra el rugido</span>.</span>
+      <span data-lang-only="pt">Onde a mata<br/><span class="italic text-[color:var(--sun)]">encontra o rugido</span>.</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-white/85 text-lg md:text-xl leading-relaxed">
+      <span data-lang-only="zh">Trilha das Cataratas · 巴西侧步道 —— 1.2 公里全景栈道，一路走进"魔鬼之喉"的水雾之中。</span>
+      <span data-lang-only="en">Trilha das Cataratas · The 1.2 km panoramic boardwalk that carries you straight into the mist of the Devil's Throat.</span>
+      <span data-lang-only="es">Trilha das Cataratas · Un sendero panorámico de 1,2 km que te lleva directo a la niebla de la Garganta del Diablo.</span>
+      <span data-lang-only="pt">Trilha das Cataratas · 1,2 km de passarela panorâmica levando você direto à névoa da Garganta do Diabo.</span>
+    </p>
+
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+      <div><div class="num-display text-4xl md:text-5xl">4.9</div><div class="text-xs uppercase tracking-widest text-white/70">8,954 <span data-lang-only="zh">评价</span><span data-lang-only="en">reviews</span><span data-lang-only="es">reseñas</span><span data-lang-only="pt">avaliações</span></div></div>
+      <div><div class="num-display text-4xl md:text-5xl">1.2<span class="text-lg">km</span></div><div class="text-xs uppercase tracking-widest text-white/70"><span data-lang-only="zh">步道长度</span><span data-lang-only="en">Trail length</span><span data-lang-only="es">Longitud</span><span data-lang-only="pt">Extensão</span></div></div>
+      <div><div class="num-display text-4xl md:text-5xl">275</div><div class="text-xs uppercase tracking-widest text-white/70"><span data-lang-only="zh">瀑布数量</span><span data-lang-only="en">Waterfalls</span><span data-lang-only="es">Cascadas</span><span data-lang-only="pt">Quedas</span></div></div>
+      <div><div class="num-display text-4xl md:text-5xl">1,500<span class="text-lg">m³/s</span></div><div class="text-xs uppercase tracking-widest text-white/70"><span data-lang-only="zh">平均流量</span><span data-lang-only="en">Avg. flow</span><span data-lang-only="es">Caudal medio</span><span data-lang-only="pt">Vazão média</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<section class="bg-[color:var(--ink)] text-[color:var(--cream)] py-5 overflow-hidden border-y border-white/10">
+  <div class="marquee whitespace-nowrap font-display italic text-xl">
+    <span class="flex gap-12">
+      <span>· Foz do Iguaçu · Paraná · Brasil</span>
+      <span>· 8H86+35</span>
+      <span>· Parque Nacional do Iguaçu</span>
+      <span>· UNESCO 1986</span>
+      <span>· 275 quedas d'água</span>
+      <span>· Garganta do Diabo</span>
+    </span>
+    <span class="flex gap-12" aria-hidden="true">
+      <span>· Foz do Iguaçu · Paraná · Brasil</span>
+      <span>· 8H86+35</span>
+      <span>· Parque Nacional do Iguaçu</span>
+      <span>· UNESCO 1986</span>
+      <span>· 275 quedas d'água</span>
+      <span>· Garganta do Diabo</span>
+    </span>
+  </div>
+</section>
+
+<!-- ============ OVERVIEW ============ -->
+<section id="overview" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+  <div class="grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-4">
+      <div class="sticky top-24">
+        <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">01 — <span data-lang-only="zh">概览</span><span data-lang-only="en">Overview</span><span data-lang-only="es">Introducción</span><span data-lang-only="pt">Introdução</span></div>
+        <h2 class="font-display text-4xl md:text-5xl mt-4 leading-tight">
+          <span data-lang-only="zh">阿根廷看瀑布<br/><em class="text-[color:var(--emerald)]">巴西赏全景</em></span>
+          <span data-lang-only="en">Argentina for the drop.<br/><em class="text-[color:var(--emerald)]">Brazil for the panorama.</em></span>
+          <span data-lang-only="es">Argentina para la caída.<br/><em class="text-[color:var(--emerald)]">Brasil para el panorama.</em></span>
+          <span data-lang-only="pt">Argentina pela queda.<br/><em class="text-[color:var(--emerald)]">Brasil pelo panorama.</em></span>
+        </h2>
+      </div>
+    </div>
+    <div class="md:col-span-8 space-y-6 text-lg leading-relaxed text-[color:var(--moss)]">
+      <p data-lang-only="zh">俗话说 <strong>"阿根廷人看瀑布，巴西人赏全景"</strong>。Trilha das Cataratas 全长约 1.2 公里，沿伊瓜苏河峡谷边缘蜿蜒而建，为您提供观赏世界上最宽瀑布群的最佳全景视角。</p>
+      <p data-lang-only="en"><strong>"Argentina to see the falls, Brazil to see the panorama."</strong> The 1.2 km trail hugs the Iguaçu canyon rim, offering the definitive wide-angle view of the world's largest waterfall system.</p>
+      <p data-lang-only="es"><strong>"Argentina para ver las cataratas, Brasil para el panorama."</strong> El sendero de 1,2 km bordea el cañón del río Iguazú, ofreciendo la vista panorámica definitiva del sistema de cascadas más ancho del mundo.</p>
+      <p data-lang-only="pt"><strong>"Argentina para ver as quedas, Brasil para ver o panorama."</strong> A trilha de 1,2 km acompanha a borda do cânion do rio Iguaçu, oferecendo a vista panorâmica definitiva do maior sistema de cachoeiras do mundo.</p>
+
+      <p data-lang-only="zh">步道隐匿于茂密的大西洋原始雨林（<em>Mata Atlântica</em>）中。您能听到震耳欲聋的水声，也能偶遇色彩斑斓的巨嘴鸟、蝴蝶群，以及随处可见的南美浣熊（<em>Quati</em>）。</p>
+      <p data-lang-only="en">The path threads through primary Atlantic rainforest (<em>Mata Atlântica</em>). Expect thunderous water, flashes of toucans and butterflies, and the ever-curious coati (<em>Quati</em>) darting across your feet.</p>
+      <p data-lang-only="es">El camino atraviesa la selva atlántica primaria (<em>Mata Atlântica</em>). Se oye el estruendo del agua, se ven tucanes y mariposas, y los curiosos coatíes (<em>Quati</em>) cruzando el sendero.</p>
+      <p data-lang-only="pt">O caminho corta a Mata Atlântica primária. Você ouve o estrondo da água, avista tucanos e borboletas, e encontra os curiosos quatis atravessando a trilha.</p>
+
+      <p data-lang-only="zh">步道的最高潮在尽头的水上栈道 —— 一直延伸至 <strong>"魔鬼之喉" (Garganta do Diabo)</strong> 的下方。漫天水雾与阳光交织，几乎每天都能看到绚丽的双彩虹。</p>
+      <p data-lang-only="en">The climax is the water-level catwalk at the trail's end, reaching directly beneath the <strong>Devil's Throat (Garganta do Diabo)</strong>. Mist and sunlight collide into a near-daily double rainbow.</p>
+      <p data-lang-only="es">El clímax es la pasarela al nivel del agua al final del sendero, que llega justo debajo de la <strong>Garganta del Diablo</strong>. La niebla y el sol se cruzan casi a diario en un doble arcoíris.</p>
+      <p data-lang-only="pt">O clímax é a passarela ao nível da água no fim da trilha, chegando bem abaixo da <strong>Garganta do Diabo</strong>. Névoa e sol se encontram quase diariamente em um arco-íris duplo.</p>
+
+      <div class="mt-10 flex flex-wrap gap-3">
+        <span class="chip text-sm px-4 py-2 rounded-full bg-white">🌿 <span data-lang-only="zh">世界自然遗产</span><span data-lang-only="en">World Heritage</span><span data-lang-only="es">Patrimonio Mundial</span><span data-lang-only="pt">Patrimônio Mundial</span></span>
+        <span class="chip text-sm px-4 py-2 rounded-full bg-white">💦 <span data-lang-only="zh">跨国大瀑布</span><span data-lang-only="en">Transnational Falls</span><span data-lang-only="es">Cataratas binacionales</span><span data-lang-only="pt">Cataratas binacionais</span></span>
+        <span class="chip text-sm px-4 py-2 rounded-full bg-white">🦋 <span data-lang-only="zh">雨林生态</span><span data-lang-only="en">Rainforest Ecology</span><span data-lang-only="es">Selva atlántica</span><span data-lang-only="pt">Mata Atlântica</span></span>
+        <span class="chip text-sm px-4 py-2 rounded-full bg-white">🌈 <span data-lang-only="zh">震撼全景</span><span data-lang-only="en">Panoramic Views</span><span data-lang-only="es">Panorama total</span><span data-lang-only="pt">Panorama total</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHTS ============ -->
+<section id="highlights" class="bg-[color:var(--moss)] text-white py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
+      <div>
+        <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--sun)]">02 — <span data-lang-only="zh">游览亮点</span><span data-lang-only="en">Highlights</span><span data-lang-only="es">Destacados</span><span data-lang-only="pt">Destaques</span></div>
+        <h2 class="font-display text-4xl md:text-6xl mt-4">
+          <span data-lang-only="zh">三重感官<em class="text-[color:var(--sun)]">洗礼</em></span>
+          <span data-lang-only="en">Three sensory<em class="text-[color:var(--sun)]"> baptisms</em></span>
+          <span data-lang-only="es">Tres bautismos<em class="text-[color:var(--sun)]"> sensoriales</em></span>
+          <span data-lang-only="pt">Três batismos<em class="text-[color:var(--sun)]"> sensoriais</em></span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card-hover rounded-3xl overflow-hidden bg-white/5 border border-white/10">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1516815231560-8f41ec531527?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="p-7">
+          <div class="text-[color:var(--sun)] text-sm font-medium">🚶‍♂️ 01</div>
+          <h3 class="font-display text-2xl mt-2">
+            <span data-lang-only="zh">峡谷悬崖漫步</span>
+            <span data-lang-only="en">Canyon-rim walk</span>
+            <span data-lang-only="es">Paseo por el cañón</span>
+            <span data-lang-only="pt">Caminhada no cânion</span>
+          </h3>
+          <p class="mt-3 text-white/75 leading-relaxed">
+            <span data-lang-only="zh">平整石板 + 木栈道，坡度平缓，老人小孩都能轻松走完。沿途多个突出观景台是绝佳摄影点。</span>
+            <span data-lang-only="en">Smooth stone and wooden boardwalks with gentle grades — easy for elders and kids. Multiple cantilevered decks along the way for photos.</span>
+            <span data-lang-only="es">Piedra lisa y pasarelas de madera con pendientes suaves — accesible para todos. Múltiples miradores para fotos.</span>
+            <span data-lang-only="pt">Pedras planas e passarelas de madeira com inclinação suave — acessível a todos. Vários mirantes para fotos.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="card-hover rounded-3xl overflow-hidden bg-white/5 border border-white/10 md:translate-y-6">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="p-7">
+          <div class="text-[color:var(--sun)] text-sm font-medium">💦 02</div>
+          <h3 class="font-display text-2xl mt-2">
+            <span data-lang-only="zh">水上栈道洗礼</span>
+            <span data-lang-only="en">The mist catwalk</span>
+            <span data-lang-only="es">Pasarela de niebla</span>
+            <span data-lang-only="pt">Passarela na névoa</span>
+          </h3>
+          <p class="mt-3 text-white/75 leading-relaxed">
+            <span data-lang-only="zh">靠近魔鬼之喉的水上栈道，瀑布激起的水雾像下雨一样把人淋透，是最原始的大自然礼赞。</span>
+            <span data-lang-only="en">Near the Devil's Throat, spray from the falls soaks you like a downpour — a raw, elemental encounter with the falls.</span>
+            <span data-lang-only="es">Cerca de la Garganta del Diablo, el rocío te empapa como un aguacero — un encuentro puro con la fuerza del agua.</span>
+            <span data-lang-only="pt">Perto da Garganta do Diabo, a névoa encharca você como uma chuva — um encontro cru com a força da água.</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="card-hover rounded-3xl overflow-hidden bg-white/5 border border-white/10">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80')"></div>
+        <div class="p-7">
+          <div class="text-[color:var(--sun)] text-sm font-medium">🛗 03</div>
+          <h3 class="font-display text-2xl mt-2">
+            <span data-lang-only="zh">全景电梯</span>
+            <span data-lang-only="en">Panoramic elevator</span>
+            <span data-lang-only="es">Ascensor panorámico</span>
+            <span data-lang-only="pt">Elevador panorâmico</span>
+          </h3>
+          <p class="mt-3 text-white/75 leading-relaxed">
+            <span data-lang-only="zh">步道终点连接下层水面栈道与上层 Porto Canoas 休息区。上升过程俯瞰整个瀑布群壮阔宏图。</span>
+            <span data-lang-only="en">Links the lower catwalk to Porto Canoas. Watch the entire falls system unfurl beneath you as it rises.</span>
+            <span data-lang-only="es">Conecta la pasarela inferior con Porto Canoas. Ve el sistema completo desplegarse mientras subes.</span>
+            <span data-lang-only="pt">Liga a passarela inferior a Porto Canoas. Todo o conjunto se abre abaixo enquanto sobe.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICAL INFO ============ -->
+<section id="practical" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+  <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">03 — <span data-lang-only="zh">实用游览指南</span><span data-lang-only="en">Practical Guide</span><span data-lang-only="es">Guía práctica</span><span data-lang-only="pt">Guia prático</span></div>
+  <h2 class="font-display text-4xl md:text-6xl mt-4 mb-14 max-w-3xl">
+    <span data-lang-only="zh">出发前<em class="text-[color:var(--emerald)]">必读</em></span>
+    <span data-lang-only="en">Read this<em class="text-[color:var(--emerald)]"> before you go</em>.</span>
+    <span data-lang-only="es">Léelo<em class="text-[color:var(--emerald)]"> antes de ir</em>.</span>
+    <span data-lang-only="pt">Leia<em class="text-[color:var(--emerald)]"> antes de ir</em>.</span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="rounded-3xl bg-white border border-black/5 p-6">
+      <div class="text-3xl">🕒</div>
+      <div class="text-xs uppercase tracking-widest text-[color:var(--emerald)] mt-4"><span data-lang-only="zh">开放时间</span><span data-lang-only="en">Hours</span><span data-lang-only="es">Horario</span><span data-lang-only="pt">Horário</span></div>
+      <div class="font-display text-2xl mt-1">09:00 — 16:00</div>
+      <p class="text-sm text-[color:var(--moss)]/80 mt-2">
+        <span data-lang-only="zh">每日开放，随季节微调，建议提前查阅。</span>
+        <span data-lang-only="en">Daily; seasonal shifts — check ahead.</span>
+        <span data-lang-only="es">Diario; ajustes estacionales — consulte antes.</span>
+        <span data-lang-only="pt">Diário; ajustes sazonais — confira antes.</span>
+      </p>
+    </div>
+    <div class="rounded-3xl bg-white border border-black/5 p-6">
+      <div class="text-3xl">🎟️</div>
+      <div class="text-xs uppercase tracking-widest text-[color:var(--emerald)] mt-4"><span data-lang-only="zh">门票与入口</span><span data-lang-only="en">Ticket & entry</span><span data-lang-only="es">Entrada</span><span data-lang-only="pt">Ingresso</span></div>
+      <div class="font-display text-2xl mt-1">Centro de Visitantes</div>
+      <p class="text-sm text-[color:var(--moss)]/80 mt-2">
+        <span data-lang-only="zh">购票后统一乘园区环保双层巴士到步道起点。</span>
+        <span data-lang-only="en">Buy tickets, then board the park's eco double-decker bus to the trailhead.</span>
+        <span data-lang-only="es">Compre entrada y tome el autobús ecológico hasta la trilha.</span>
+        <span data-lang-only="pt">Compre o ingresso e pegue o ônibus ecológico até a trilha.</span>
+      </p>
+    </div>
+    <div class="rounded-3xl bg-white border border-black/5 p-6">
+      <div class="text-3xl">⏱️</div>
+      <div class="text-xs uppercase tracking-widest text-[color:var(--emerald)] mt-4"><span data-lang-only="zh">游览时长</span><span data-lang-only="en">Duration</span><span data-lang-only="es">Duración</span><span data-lang-only="pt">Duração</span></div>
+      <div class="font-display text-2xl mt-1">3 — 4 h</div>
+      <p class="text-sm text-[color:var(--moss)]/80 mt-2">
+        <span data-lang-only="zh">步行 1.5-2 小时 + 巴士与拍照，建议预留 3-4 小时。</span>
+        <span data-lang-only="en">1.5–2 h walking + bus + photos. Block 3–4 h total.</span>
+        <span data-lang-only="es">1,5–2 h caminando + bus + fotos. Reserve 3–4 h.</span>
+        <span data-lang-only="pt">1,5–2 h caminhando + ônibus + fotos. Reserve 3–4 h.</span>
+      </p>
+    </div>
+    <div class="rounded-3xl bg-[color:var(--sun)]/20 border border-[color:var(--sun)]/40 p-6">
+      <div class="text-3xl">⚠️</div>
+      <div class="text-xs uppercase tracking-widest text-[color:var(--emerald)] mt-4"><span data-lang-only="zh">重要贴士</span><span data-lang-only="en">Key tips</span><span data-lang-only="es">Consejos</span><span data-lang-only="pt">Dicas</span></div>
+      <ul class="mt-2 space-y-1.5 text-sm text-[color:var(--ink)]">
+        <li>💧 <span data-lang-only="zh">务必带雨衣 + 手机防水袋</span><span data-lang-only="en">Poncho + phone drybag are mandatory</span><span data-lang-only="es">Poncho y bolsa impermeable obligatorios</span><span data-lang-only="pt">Capa de chuva + saco à prova d'água</span></li>
+        <li>🦝 <span data-lang-only="zh">严禁喂食浣熊 (Quati)</span><span data-lang-only="en">Never feed the coatis (Quati)</span><span data-lang-only="es">No alimente a los coatíes</span><span data-lang-only="pt">Não alimente os quatis</span></li>
+        <li>♿ <span data-lang-only="zh">全程无障碍友好</span><span data-lang-only="en">Fully wheelchair accessible</span><span data-lang-only="es">Accesible en silla de ruedas</span><span data-lang-only="pt">Acessível em cadeira de rodas</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSPORT ============ -->
+<section class="bg-[color:var(--mist)] py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">04 — <span data-lang-only="zh">交通指南</span><span data-lang-only="en">Transport</span><span data-lang-only="es">Transporte</span><span data-lang-only="pt">Transporte</span></div>
+        <h2 class="font-display text-4xl md:text-5xl mt-4 leading-tight">
+          <span data-lang-only="zh">三种方式<br/><em class="text-[color:var(--emerald)]">到达园区</em></span>
+          <span data-lang-only="en">Three ways<br/><em class="text-[color:var(--emerald)]">to arrive</em></span>
+          <span data-lang-only="es">Tres formas<br/><em class="text-[color:var(--emerald)]">de llegar</em></span>
+          <span data-lang-only="pt">Três formas<br/><em class="text-[color:var(--emerald)]">de chegar</em></span>
+        </h2>
+        <p class="mt-6 text-[color:var(--moss)]/80">
+          <span data-lang-only="zh">距离机场仅 3 公里，市中心约 30 分钟车程。</span>
+          <span data-lang-only="en">Just 3 km from the airport, ~30 minutes from downtown Foz.</span>
+          <span data-lang-only="es">A solo 3 km del aeropuerto, ~30 min del centro de Foz.</span>
+          <span data-lang-only="pt">A apenas 3 km do aeroporto, ~30 min do centro de Foz.</span>
+        </p>
+      </div>
+
+      <div class="md:col-span-8 space-y-4">
+        <div class="rounded-3xl bg-white p-7 border border-black/5">
+          <div class="flex items-start gap-5">
+            <div class="text-4xl">✈️</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline gap-4 flex-wrap">
+                <h3 class="font-display text-2xl"><span data-lang-only="zh">从福斯-杜伊瓜苏机场 (IGU)</span><span data-lang-only="en">From Foz do Iguaçu Airport (IGU)</span><span data-lang-only="es">Desde el aeropuerto (IGU)</span><span data-lang-only="pt">Do Aeroporto (IGU)</span></h3>
+                <span class="text-[color:var(--emerald)] font-medium">3 km · 5-10 min</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-[color:var(--moss)]">
+                <li>🚌 <strong>Linha 120 — Parque Nacional</strong> · <span data-lang-only="zh">最经济，约 R$5，机场即可上车</span><span data-lang-only="en">Cheapest, ~R$5, boards right outside terminal</span><span data-lang-only="es">Más económico, ~R$5, sale del terminal</span><span data-lang-only="pt">Mais barato, ~R$5, saída do terminal</span></li>
+                <li>🚕 <span data-lang-only="zh">出租车 / Uber · 5 分钟, 便于携带行李</span><span data-lang-only="en">Taxi / Uber · 5 min, easy with luggage</span><span data-lang-only="es">Taxi / Uber · 5 min, ideal con equipaje</span><span data-lang-only="pt">Táxi / Uber · 5 min, ideal com bagagem</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-white p-7 border border-black/5">
+          <div class="flex items-start gap-5">
+            <div class="text-4xl">🏙️</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline gap-4 flex-wrap">
+                <h3 class="font-display text-2xl"><span data-lang-only="zh">从市中心 (Centro)</span><span data-lang-only="en">From Downtown (Centro)</span><span data-lang-only="es">Desde el Centro</span><span data-lang-only="pt">Do Centro</span></h3>
+                <span class="text-[color:var(--emerald)] font-medium">~20 km · 30-40 min</span>
+              </div>
+              <ul class="mt-4 space-y-2 text-[color:var(--moss)]">
+                <li>🚌 <strong>Linha 120</strong> · <span data-lang-only="zh">贯穿市中心-机场-国家公园，约 40 分钟</span><span data-lang-only="en">Loops through downtown → airport → park, ~40 min</span><span data-lang-only="es">Recorre centro → aeropuerto → parque, ~40 min</span><span data-lang-only="pt">Passa centro → aeroporto → parque, ~40 min</span></li>
+                <li>📱 Uber / 99 · R$30 — R$50, ~30 min</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-white p-7 border border-black/5">
+          <div class="flex items-start gap-5">
+            <div class="text-4xl">🚗</div>
+            <div class="flex-1">
+              <div class="flex justify-between items-baseline gap-4 flex-wrap">
+                <h3 class="font-display text-2xl"><span data-lang-only="zh">自驾与停车</span><span data-lang-only="en">Self-drive & Parking</span><span data-lang-only="es">En coche y estacionamiento</span><span data-lang-only="pt">Carro próprio</span></h3>
+                <span class="text-[color:var(--emerald)] font-medium">Centro de Visitantes</span>
+              </div>
+              <p class="mt-4 text-[color:var(--moss)]">
+                <span data-lang-only="zh">游客中心外设大型付费停车场；停车后换乘园区免费环保巴士进入景区。</span>
+                <span data-lang-only="en">Large paid lot at the visitor center; transfer to the free eco-shuttle inside.</span>
+                <span data-lang-only="es">Gran estacionamiento pago junto al centro de visitantes; luego autobús ecológico gratuito.</span>
+                <span data-lang-only="pt">Estacionamento pago no centro de visitantes; depois ônibus ecológico gratuito.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENCYCLOPEDIA ============ -->
+<section id="encyclopedia" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+  <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">05 — <span data-lang-only="zh">深度百科</span><span data-lang-only="en">Encyclopedia</span><span data-lang-only="es">Enciclopedia</span><span data-lang-only="pt">Enciclopédia</span></div>
+  <h2 class="font-display text-4xl md:text-6xl mt-4 mb-14 max-w-3xl">
+    <span data-lang-only="zh">1.3 亿年<em class="text-[color:var(--emerald)]"> · 一条河 · 一个传说</em></span>
+    <span data-lang-only="en">130 million years.<em class="text-[color:var(--emerald)]"> One river. One legend.</em></span>
+    <span data-lang-only="es">130 millones de años.<em class="text-[color:var(--emerald)]"> Un río. Una leyenda.</em></span>
+    <span data-lang-only="pt">130 milhões de anos.<em class="text-[color:var(--emerald)]"> Um rio. Uma lenda.</em></span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <article class="rounded-3xl border border-black/10 p-8 bg-white">
+      <div class="text-4xl">🌋</div>
+      <h3 class="font-display text-2xl mt-4"><span data-lang-only="zh">地质起源：玄武岩阶地</span><span data-lang-only="en">Geological Origin: Basalt Terraces</span><span data-lang-only="es">Origen geológico: terrazas de basalto</span><span data-lang-only="pt">Origem geológica: terraços de basalto</span></h3>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">追溯至 1.3 亿年前白垩纪，火山喷发的岩浆冷却成坚硬玄武岩。断层运动令伊瓜苏河床产生巨大落差，流水历经百万年切割雕琢出阶梯状峡谷。</span>
+        <span data-lang-only="en">Cretaceous volcanic flows (~130 Mya) cooled into basalt. Faulting created the massive drop; the river spent millions of years carving today's tiered canyon.</span>
+        <span data-lang-only="es">Flujos volcánicos del Cretácico (~130 Ma) enfriaron en basalto. La falla creó la caída; el río tardó millones de años en tallar el cañón.</span>
+        <span data-lang-only="pt">Fluxos vulcânicos do Cretáceo (~130 Ma) esfriaram em basalto. A falha criou o desnível; o rio esculpiu o cânion por milhões de anos.</span>
+      </p>
+    </article>
+
+    <article class="rounded-3xl border border-black/10 p-8 bg-white">
+      <div class="text-4xl">🐍</div>
+      <h3 class="font-display text-2xl mt-4"><span data-lang-only="zh">瓜拉尼人的传说</span><span data-lang-only="en">The Guarani Legend</span><span data-lang-only="es">La leyenda guaraní</span><span data-lang-only="pt">A lenda guarani</span></h3>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">少女 Naipi 本要被献祭给蛇神 M'Boi。她与爱人 Tarobá 乘独木舟私奔，激怒蛇神。M'Boi 将河截断形成瀑布，将两人永远困在深渊与悬崖之间。</span>
+        <span data-lang-only="en">The maiden Naipi was to be sacrificed to the serpent-god M'Boi. She fled by canoe with her lover Tarobá; enraged, M'Boi split the river to form the falls, trapping the pair forever between abyss and cliff.</span>
+        <span data-lang-only="es">La joven Naipi iba a ser sacrificada al dios serpiente M'Boi. Huyó en canoa con Tarobá; furioso, M'Boi partió el río creando las cataratas, atrapándolos entre abismo y risco.</span>
+        <span data-lang-only="pt">A jovem Naipi seria sacrificada à serpente M'Boi. Fugiu de canoa com Tarobá; furioso, M'Boi partiu o rio criando as quedas, prendendo o casal entre abismo e penhasco.</span>
+      </p>
+    </article>
+
+    <article class="rounded-3xl border border-black/10 p-8 bg-white">
+      <div class="text-4xl">💧</div>
+      <h3 class="font-display text-2xl mt-4"><span data-lang-only="zh">水文数据：极限流量</span><span data-lang-only="en">Hydrology: Extreme Flow</span><span data-lang-only="es">Hidrología: caudal extremo</span><span data-lang-only="pt">Hidrologia: vazão extrema</span></h3>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">平均流量约 1,500 m³/s。2014 年历史洪峰达到 46,300 m³/s —— 是平时的 30 多倍，几乎淹没所有观景栈道。</span>
+        <span data-lang-only="en">Average flow ~1,500 m³/s. The 2014 flood peaked at 46,300 m³/s — over 30× normal, nearly submerging every catwalk.</span>
+        <span data-lang-only="es">Caudal medio ~1.500 m³/s. En 2014 llegó a 46.300 m³/s — más de 30× lo normal, casi sumergiendo todas las pasarelas.</span>
+        <span data-lang-only="pt">Vazão média ~1.500 m³/s. Em 2014 atingiu 46.300 m³/s — mais de 30× o normal, quase submergindo todas as passarelas.</span>
+      </p>
+    </article>
+
+    <article class="rounded-3xl border border-black/10 p-8 bg-white">
+      <div class="text-4xl">🗺️</div>
+      <h3 class="font-display text-2xl mt-4"><span data-lang-only="zh">1541：欧洲人的首次发现</span><span data-lang-only="en">1541: European Discovery</span><span data-lang-only="es">1541: descubrimiento europeo</span><span data-lang-only="pt">1541: descoberta europeia</span></h3>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">1541 年，西班牙探险家 Álvar Núñez Cabeza de Vaca 在寻找通往亚松森的内陆路线时听到震耳水声，成为首位记录伊瓜苏瀑布的欧洲人。</span>
+        <span data-lang-only="en">In 1541, Spanish explorer Álvar Núñez Cabeza de Vaca — searching for a route to Asunción — followed the thunder and became the first European to record the falls.</span>
+        <span data-lang-only="es">En 1541, el explorador español Álvar Núñez Cabeza de Vaca, buscando ruta a Asunción, siguió el estruendo y fue el primer europeo en registrar las cataratas.</span>
+        <span data-lang-only="pt">Em 1541, o explorador espanhol Álvar Núñez Cabeza de Vaca, buscando rota a Assunção, seguiu o estrondo e foi o primeiro europeu a registrar as cataratas.</span>
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="bg-[color:var(--ink)] text-white py-24 md:py-32 grain">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
+      <div>
+        <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--sun)]">06 — <span data-lang-only="zh">视觉图集</span><span data-lang-only="en">Gallery</span><span data-lang-only="es">Galería</span><span data-lang-only="pt">Galeria</span></div>
+        <h2 class="font-display text-4xl md:text-6xl mt-4">
+          <span data-lang-only="zh">水、光、雾、彩虹</span>
+          <span data-lang-only="en">Water. Light. Mist. Rainbow.</span>
+          <span data-lang-only="es">Agua. Luz. Niebla. Arcoíris.</span>
+          <span data-lang-only="pt">Água. Luz. Névoa. Arco-íris.</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-3 md:gap-4">
+      <figure class="col-span-8 row-span-2 aspect-[16/10] rounded-2xl overflow-hidden"><img loading="lazy" alt="Iguaçu Falls panoramic view from Brazilian side" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1590060766972-88f22d68f2ff?auto=format&fit=crop&w=1600&q=80"/></figure>
+      <figure class="col-span-4 aspect-square rounded-2xl overflow-hidden"><img loading="lazy" alt="Rainbow over Devil's Throat" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1516815231560-8f41ec531527?auto=format&fit=crop&w=800&q=80"/></figure>
+      <figure class="col-span-4 aspect-square rounded-2xl overflow-hidden"><img loading="lazy" alt="Toucan in Mata Atlântica" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1611689342806-0863700ce1e4?auto=format&fit=crop&w=800&q=80"/></figure>
+      <figure class="col-span-6 md:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden"><img loading="lazy" alt="Boardwalk into the mist" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80"/></figure>
+      <figure class="col-span-6 md:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden"><img loading="lazy" alt="Rainforest canopy" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80"/></figure>
+      <figure class="col-span-12 md:col-span-4 aspect-[4/3] rounded-2xl overflow-hidden"><img loading="lazy" alt="Coati crossing the path" class="w-full h-full object-cover hover:scale-105 transition duration-700" src="https://images.unsplash.com/photo-1470114716159-e389f8712fda?auto=format&fit=crop&w=1000&q=80"/></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+  <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
+    <div>
+      <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">07 — <span data-lang-only="zh">游客评价</span><span data-lang-only="en">Reviews</span><span data-lang-only="es">Reseñas</span><span data-lang-only="pt">Avaliações</span></div>
+      <h2 class="font-display text-4xl md:text-6xl mt-4">
+        <span data-lang-only="zh">4.9<span class="text-[color:var(--emerald)]">/5</span> · 来自 8,954 位旅行者</span>
+        <span data-lang-only="en">4.9<span class="text-[color:var(--emerald)]">/5</span> · from 8,954 travelers</span>
+        <span data-lang-only="es">4.9<span class="text-[color:var(--emerald)]">/5</span> · de 8,954 viajeros</span>
+        <span data-lang-only="pt">4.9<span class="text-[color:var(--emerald)]">/5</span> · de 8.954 viajantes</span>
+      </h2>
+    </div>
+    <div class="flex gap-1 text-3xl text-[color:var(--sun)]">★★★★★</div>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <!-- 1 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-05</div></div>
+      <h4 class="font-display text-xl mt-3">"<span data-lang-only="zh">大自然的终极震撼</span><span data-lang-only="en">Nature at its most humbling</span><span data-lang-only="es">La naturaleza en su forma más humilde</span><span data-lang-only="pt">A natureza em sua forma mais humilde</span>"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">
+        <span data-lang-only="zh">相比阿根廷侧，巴西这边的步道能让你看清伊瓜苏的全貌。走到魔鬼之喉栈道的时候，那种水汽和轰鸣声让人终生难忘。记得带雨衣！</span>
+        <span data-lang-only="en">Compared to the Argentine side, the Brazilian trail shows you the whole picture. The Devil's Throat catwalk — the mist and roar — is unforgettable. Bring a poncho!</span>
+        <span data-lang-only="es">Comparado con Argentina, el lado brasileño te muestra todo. La pasarela de la Garganta del Diablo, con la niebla y el rugido, es inolvidable. ¡Lleva poncho!</span>
+        <span data-lang-only="pt">Comparado ao lado argentino, o lado brasileiro mostra o todo. A passarela da Garganta do Diabo, com névoa e estrondo, é inesquecível. Leve capa!</span>
+      </p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Maria S. · 🇧🇷</div>
+    </article>
+    <!-- 2 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-04</div></div>
+      <h4 class="font-display text-xl mt-3">"Perfectly organized park"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">The park's shuttle bus system is incredibly efficient, and the trail itself is beautifully maintained — even my 70-year-old father made it through easily. The panoramic elevator at the end offers a view that words simply can't do justice to.</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">James W. · 🇺🇸</div>
+    </article>
+    <!-- 3 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★<span class="text-black/20">★</span></div><div class="text-xs text-[color:var(--moss)]/60">2025-03</div></div>
+      <h4 class="font-display text-xl mt-3">"<span data-lang-only="zh">彩虹很美，浣熊调皮</span><span data-lang-only="en">Beautiful rainbows, cheeky coatis</span><span data-lang-only="es">Arcoíris hermosos, coatíes traviesos</span><span data-lang-only="pt">Arco-íris lindos, quatis levados</span>"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">
+        <span data-lang-only="zh">风景绝对是满分，水汽形成的彩虹太美了。扣掉一星是因为有游客不遵守规定喂浣熊，导致动物有点攻击性。大家一定要保护好自己的零食！</span>
+        <span data-lang-only="en">Scenery is a perfect 10, the mist-rainbows are stunning. Lost a star because some tourists fed the coatis, making them a bit aggressive. Guard your snacks!</span>
+        <span data-lang-only="es">Paisaje 10/10, arcoíris increíbles. Le quito una estrella porque algunos turistas alimentan a los coatíes y se ponen agresivos. ¡Cuida tus snacks!</span>
+        <span data-lang-only="pt">Paisagem 10/10, arco-íris incríveis. Tiro uma estrela porque alguns turistas alimentam os quatis, que ficam agressivos. Cuide dos seus lanches!</span>
+      </p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Lin Y. · 🇨🇳</div>
+    </article>
+    <!-- 4 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-06</div></div>
+      <h4 class="font-display text-xl mt-3">"Una experiencia que cambia la vida"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">Ya había visto el lado argentino, pero la vista panorámica desde Brasil es simplemente otra dimensión. El arco iris doble sobre la Garganta del Diablo me hizo llorar. 100% recomendado hacer ambos lados.</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Sofía R. · 🇦🇷</div>
+    </article>
+    <!-- 5 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-02</div></div>
+      <h4 class="font-display text-xl mt-3">"Vale cada centavo do ingresso"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">Sou brasileiro e já visitei três vezes. Cada visita é uma emoção nova — na estação chuvosa o volume de água é assustador, na seca dá pra ver as formações rochosas com mais clareza. A trilha é impecável.</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Rafael M. · 🇧🇷</div>
+    </article>
+    <!-- 6 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2024-11</div></div>
+      <h4 class="font-display text-xl mt-3">"Best day of our honeymoon"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">We booked the 9AM entry to avoid crowds and it was the best decision. Walked the trail slowly, saw toucans, coatis, and finished with lunch at Porto Canoas overlooking the river. Absolutely magical honeymoon memory.</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Emily & Tom H. · 🇬🇧</div>
+    </article>
+    <!-- 7 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-01</div></div>
+      <h4 class="font-display text-xl mt-3">"雨季の水量に圧倒された"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">1月は雨季で水量が本当にすごかった。展望台では傘は役に立たず、レインコート必須です。カメラは防水バッグに入れてください。ただし虹の出現率は圧倒的に高いのでおすすめ。</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Kenji T. · 🇯🇵</div>
+    </article>
+    <!-- 8 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★<span class="text-black/20">★</span></div><div class="text-xs text-[color:var(--moss)]/60">2024-12</div></div>
+      <h4 class="font-display text-xl mt-3">"<span data-lang-only="zh">壮观但人流较大</span><span data-lang-only="en">Spectacular but crowded</span><span data-lang-only="es">Espectacular pero lleno</span><span data-lang-only="pt">Espetacular mas lotado</span>"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">
+        <span data-lang-only="zh">景色没得说，绝对是世界级的震撼。唯一的问题是下午两点后人非常多，观景台栈道要排队走，拍照很难避开人群。强烈建议 9 点开门就进园。</span>
+        <span data-lang-only="en">Scenery is world-class. Only issue: after 2 PM it's packed, you queue on the catwalks and photos are crowded. Strongly recommend arriving at 9 AM opening.</span>
+        <span data-lang-only="es">Paisaje de nivel mundial. Único problema: después de las 14 h está llenísimo. Recomiendo llegar a las 9 h.</span>
+        <span data-lang-only="pt">Paisagem de nível mundial. Único problema: depois das 14 h fica muito cheio. Recomendo chegar às 9 h.</span>
+      </p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Wang H. · 🇨🇳</div>
+    </article>
+    <!-- 9 -->
+    <article class="rounded-3xl bg-white border border-black/5 p-7">
+      <div class="flex items-center justify-between"><div class="text-[color:var(--sun)]">★★★★★</div><div class="text-xs text-[color:var(--moss)]/60">2025-05</div></div>
+      <h4 class="font-display text-xl mt-3">"Sensational engineering meets pure nature"</h4>
+      <p class="mt-3 text-[color:var(--moss)] leading-relaxed text-sm">Wheelchair accessibility here is world-class — my mother uses a wheelchair and she was able to experience nearly the entire trail including the Devil's Throat walkway. The elevator to Porto Canoas made everything seamless. Bravo, Brazil.</p>
+      <div class="mt-5 text-sm text-[color:var(--emerald)]">Anna K. · 🇩🇪</div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SURROUNDING ============ -->
+<section class="bg-[color:var(--mist)] py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)]">08 — <span data-lang-only="zh">周边联动</span><span data-lang-only="en">Nearby</span><span data-lang-only="es">Alrededores</span><span data-lang-only="pt">Arredores</span></div>
+    <h2 class="font-display text-4xl md:text-6xl mt-4 mb-14 max-w-3xl">
+      <span data-lang-only="zh">还可以<em class="text-[color:var(--emerald)]">连着玩</em></span>
+      <span data-lang-only="en">Extend the trip<em class="text-[color:var(--emerald)]"> further</em></span>
+      <span data-lang-only="es">Extiende tu viaje<em class="text-[color:var(--emerald)]"> aún más</em></span>
+      <span data-lang-only="pt">Estenda a viagem<em class="text-[color:var(--emerald)]"> ainda mais</em></span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <article class="rounded-3xl bg-white overflow-hidden card-hover">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1611689342806-0863700ce1e4?auto=format&fit=crop&w=1000&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-display text-2xl">🦜 Parque das Aves</h3>
+          <p class="mt-2 text-[color:var(--moss)] text-sm leading-relaxed">
+            <span data-lang-only="zh">距国家公园入口仅 300 米。南美最大的鸟类保护区，1,300+ 只热带鸟类，可零距离接触巨嘴鸟与金刚鹦鹉。</span>
+            <span data-lang-only="en">300 m from the park entrance. South America's largest bird sanctuary; 1,300+ tropical birds you can meet up-close.</span>
+            <span data-lang-only="es">A 300 m del parque. El santuario de aves más grande de Sudamérica; 1.300+ aves tropicales.</span>
+            <span data-lang-only="pt">A 300 m do parque. O maior santuário de aves da América do Sul; 1.300+ aves tropicais.</span>
+          </p>
+        </div>
+      </article>
+      <article class="rounded-3xl bg-white overflow-hidden card-hover">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-display text-2xl">🚤 Macuco Safari</h3>
+          <p class="mt-2 text-[color:var(--moss)] text-sm leading-relaxed">
+            <span data-lang-only="zh">园内探险项目。敞篷吉普穿越雨林，快艇逆流冲入瀑布下方，体验瀑布威力最刺激的方式。</span>
+            <span data-lang-only="en">Inside the park. Open jeeps through the jungle, then speedboats charge upstream directly under the falls.</span>
+            <span data-lang-only="es">Dentro del parque. Jeeps abiertos por la selva, luego lanchas hasta debajo de las cascadas.</span>
+            <span data-lang-only="pt">Dentro do parque. Jipes abertos pela mata e lanchas até debaixo das quedas.</span>
+          </p>
+        </div>
+      </article>
+      <article class="rounded-3xl bg-white overflow-hidden card-hover">
+        <div class="aspect-[4/3] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80')"></div>
+        <div class="p-6">
+          <h3 class="font-display text-2xl">⚡ Itaipu Binacional</h3>
+          <p class="mt-2 text-[color:var(--moss)] text-sm leading-relaxed">
+            <span data-lang-only="zh">世界上发电量最大的水电站之一。宏伟混凝土大坝是现代工程奇迹，提供常规观光与深入机房专业路线。</span>
+            <span data-lang-only="en">One of the world's largest hydroelectric plants. A modern engineering wonder with both standard tours and deep technical routes.</span>
+            <span data-lang-only="es">Una de las mayores hidroeléctricas del mundo. Ofrece visitas turísticas y rutas técnicas profundas.</span>
+            <span data-lang-only="pt">Uma das maiores hidrelétricas do mundo. Visitas turísticas e rotas técnicas profundas.</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="max-w-4xl mx-auto px-6 py-24 md:py-32">
+  <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--emerald)] text-center">09 — FAQ</div>
+  <h2 class="font-display text-4xl md:text-6xl mt-4 text-center mb-14">
+    <span data-lang-only="zh">常见问题</span>
+    <span data-lang-only="en">Common questions</span>
+    <span data-lang-only="es">Preguntas frecuentes</span>
+    <span data-lang-only="pt">Perguntas frequentes</span>
+  </h2>
+
+  <div class="space-y-3">
+    <details class="group rounded-2xl border border-black/10 bg-white p-6">
+      <summary class="cursor-pointer flex justify-between items-center gap-4 list-none">
+        <span class="font-display text-xl"><span data-lang-only="zh">走这条步道需要很高的体力吗？</span><span data-lang-only="en">Is the trail physically demanding?</span><span data-lang-only="es">¿Requiere buena condición física?</span><span data-lang-only="pt">A trilha exige preparo físico?</span></span>
+        <span class="plus text-2xl text-[color:var(--emerald)]">+</span>
+      </summary>
+      <p class="mt-4 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">不需要。全程仅 1.2 公里，路面平整、坡度很小，适合所有年龄段。行动不便的游客可跳过步行直接乘大巴到终点，通过无障碍电梯直达主观景台。</span>
+        <span data-lang-only="en">Not at all. Just 1.2 km on paved, gently graded paths — friendly to all ages. Guests with limited mobility can skip the walk, take the bus to the endpoint, and use the accessible elevator.</span>
+        <span data-lang-only="es">Para nada. Solo 1,2 km en camino plano y con pendiente suave — apto para todas las edades. Personas con movilidad reducida pueden ir directo al ascensor.</span>
+        <span data-lang-only="pt">De jeito nenhum. Apenas 1,2 km em piso plano e com inclinação suave — para todas as idades. Pessoas com mobilidade reduzida podem ir direto ao elevador.</span>
+      </p>
+    </details>
+
+    <details class="group rounded-2xl border border-black/10 bg-white p-6">
+      <summary class="cursor-pointer flex justify-between items-center gap-4 list-none">
+        <span class="font-display text-xl"><span data-lang-only="zh">巴西侧和阿根廷侧的瀑布有什么区别？</span><span data-lang-only="en">Brazil side vs Argentina side?</span><span data-lang-only="es">¿Lado brasileño vs argentino?</span><span data-lang-only="pt">Lado brasileiro vs argentino?</span></span>
+        <span class="plus text-2xl text-[color:var(--emerald)]">+</span>
+      </summary>
+      <p class="mt-4 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">强推两侧都看。巴西侧（Trilha das Cataratas）以"上帝视角"的全景取胜，适合摄影与欣赏整体；阿根廷侧步道更长，以深入瀑布内部的沉浸式体验为主。</span>
+        <span data-lang-only="en">See both. Brazil delivers the panoramic "god view" — best for photos and grasping the whole system. Argentina has longer trails that put you inside the falls for an immersive experience.</span>
+        <span data-lang-only="es">Ambos. Brasil ofrece la vista panorámica; Argentina te sumerge dentro de las cataratas.</span>
+        <span data-lang-only="pt">Os dois. Brasil oferece a vista panorâmica; Argentina te mergulha dentro das quedas.</span>
+      </p>
+    </details>
+
+    <details class="group rounded-2xl border border-black/10 bg-white p-6">
+      <summary class="cursor-pointer flex justify-between items-center gap-4 list-none">
+        <span class="font-display text-xl"><span data-lang-only="zh">什么时候是游览的最佳时间？</span><span data-lang-only="en">What's the best time to visit?</span><span data-lang-only="es">¿Cuál es el mejor horario?</span><span data-lang-only="pt">Qual é o melhor horário?</span></span>
+        <span class="plus text-2xl text-[color:var(--emerald)]">+</span>
+      </summary>
+      <p class="mt-4 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">早上 9:00 公园刚开门是避开人潮的最佳时段；下午 14:00-16:00 阳光角度最好，是拍摄瀑布彩虹的黄金时间。</span>
+        <span data-lang-only="en">9 AM opening beats the crowds. 2–4 PM has the best sun angle — the golden window for rainbow photos.</span>
+        <span data-lang-only="es">Las 9 h evitan multitudes. 14–16 h ofrece el mejor ángulo solar para arcoíris.</span>
+        <span data-lang-only="pt">Às 9 h evita as multidões. 14–16 h tem o melhor ângulo do sol para arco-íris.</span>
+      </p>
+    </details>
+
+    <details class="group rounded-2xl border border-black/10 bg-white p-6">
+      <summary class="cursor-pointer flex justify-between items-center gap-4 list-none">
+        <span class="font-display text-xl"><span data-lang-only="zh">从巴西去阿根廷侧需要签证吗？</span><span data-lang-only="en">Do I need a visa to cross to Argentina?</span><span data-lang-only="es">¿Necesito visa para cruzar a Argentina?</span><span data-lang-only="pt">Preciso de visto para a Argentina?</span></span>
+        <span class="plus text-2xl text-[color:var(--emerald)]">+</span>
+      </summary>
+      <p class="mt-4 text-[color:var(--moss)] leading-relaxed">
+        <span data-lang-only="zh">取决于国籍。中国护照持有者若有有效美国 / 加拿大 / 申根签证，可通过阿根廷 AVE 电子旅行授权免签入境。跨境时请在友谊桥 (Tancredo Neves) 备齐文件。</span>
+        <span data-lang-only="en">Depends on your passport. Chinese passport holders with valid US / Canada / Schengen visas can enter via Argentina's AVE electronic authorization. Have documents ready at the Tancredo Neves bridge.</span>
+        <span data-lang-only="es">Depende del pasaporte. Los titulares chinos con visa USA / Canadá / Schengen pueden usar AVE. Documentos listos en el puente Tancredo Neves.</span>
+        <span data-lang-only="pt">Depende do passaporte. Chineses com visto EUA / Canadá / Schengen podem usar o AVE. Documentos prontos na ponte Tancredo Neves.</span>
+      </p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA / FOOTER ============ -->
+<footer class="bg-[color:var(--ink)] text-[color:var(--cream)]">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-6">
+      <h2 class="font-display text-4xl md:text-5xl leading-tight">
+        <span data-lang-only="zh">今天，走进<br/><em class="text-[color:var(--sun)]">水雾深处</em>。</span>
+        <span data-lang-only="en">Today, step<br/><em class="text-[color:var(--sun)]">into the mist</em>.</span>
+        <span data-lang-only="es">Hoy, entra<br/><em class="text-[color:var(--sun)]">en la niebla</em>.</span>
+        <span data-lang-only="pt">Hoje, entre<br/><em class="text-[color:var(--sun)]">na névoa</em>.</span>
+      </h2>
+      <p class="mt-6 text-white/70 max-w-md">
+        <span data-lang-only="zh">Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil</span>
+        <span data-lang-only="en">Trilha das Cataratas · Iguaçu National Park · Foz do Iguaçu, PR, Brazil</span>
+        <span data-lang-only="es">Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil</span>
+        <span data-lang-only="pt">Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil</span>
+      </p>
+    </div>
+    <div class="md:col-span-3">
+      <div class="text-xs uppercase tracking-widest text-[color:var(--sun)] mb-4">Location</div>
+      <div class="space-y-1 text-white/80">
+        <div>Plus Code · 8H86+35</div>
+        <div>Foz do Iguaçu — PR</div>
+        <div>Brasil</div>
+      </div>
+    </div>
+    <div class="md:col-span-3">
+      <div class="text-xs uppercase tracking-widest text-[color:var(--sun)] mb-4">Rating</div>
+      <div class="num-display text-5xl">4.9</div>
+      <div class="text-white/60 text-sm">8,954 reviews</div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-white/40">
+    © 2026 · Astro + Tailwind · Static · Cloudflare Pages Ready
+  </div>
+</footer>
+
+<!-- ============ JSON-LD Structured Data ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "name": "Trilha das Cataratas Brasil",
+  "description": "The 1.2 km panoramic boardwalk on the Brazilian side of Iguaçu Falls, reaching the Devil's Throat catwalk.",
+  "image": "https://images.unsplash.com/photo-1590060766972-88f22d68f2ff",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Foz do Iguaçu",
+    "addressRegion": "PR",
+    "addressCountry": "BR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -25.6953, "longitude": -54.4367 },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "8954" },
+  "openingHours": "Mo-Su 09:00-16:00"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is the trail physically demanding?","acceptedAnswer":{"@type":"Answer","text":"Not at all. Just 1.2 km on paved, gently graded paths — friendly to all ages."}},
+    {"@type":"Question","name":"Brazil side vs Argentina side?","acceptedAnswer":{"@type":"Answer","text":"Brazil delivers panoramic views; Argentina puts you inside the falls."}},
+    {"@type":"Question","name":"What's the best time to visit?","acceptedAnswer":{"@type":"Answer","text":"9 AM opening beats the crowds. 2–4 PM has the best sun angle for rainbows."}},
+    {"@type":"Question","name":"Do I need a visa to cross to Argentina?","acceptedAnswer":{"@type":"Answer","text":"Depends on your passport. Chinese passport holders with US/Canada/Schengen visas can use AVE."}}
+  ]
+}
+</script>
+
+<script>
+  document.querySelectorAll('[data-set-lang]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const lang = btn.dataset.setLang;
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('[data-set-lang]').forEach(b=>b.classList.toggle('active', b.dataset.setLang===lang));
+    });
+  });
+</script>
+
+</body>
+</html>
