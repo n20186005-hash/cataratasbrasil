@@ -4,19 +4,44 @@ import { hero } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
+const heroImg = '/gallery/trilha-das-cataratas-brasil (6).jpg';
+const heroAlt = {
+  zh: 'Mirante da Garganta do Diabo - 巴西福斯-杜伊瓜苏主视角全景',
+  en: 'Mirante da Garganta do Diabo - Main panoramic view in Foz do Iguaçu, Brazil',
+  es: 'Mirante da Garganta del Diablo - Vista panorámica principal en Foz do Iguaçu, Brasil',
+  pt: 'Mirante da Garganta do Diabo - Vista panorâmica principal em Foz do Iguaçu, Brasil',
+}[lang];
 ---
-<section id="top" class="hero-bg relative min-h-[100vh] flex items-end pt-24" style="background-image: linear-gradient(180deg, rgba(11,31,26,.15) 0%, rgba(11,31,26,.55) 55%, rgba(11,31,26,.85) 100%), url('/gallery/trilha-das-cataratas-brasil (6).jpg')">
+<section id="top" class="hero-bg relative min-h-[100vh] flex items-end pt-24 overflow-hidden">
+  <img
+    src={heroImg}
+    alt={heroAlt}
+    loading="eager"
+    fetchPriority="high"
+    width="2400"
+    height="1600"
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+  <div class="absolute inset-0" style="background-image: linear-gradient(180deg, rgba(11,31,26,.15) 0%, rgba(11,31,26,.55) 55%, rgba(11,31,26,.85) 100%)"></div>
   <div class="rain absolute inset-0"></div>
   <div class="relative max-w-7xl mx-auto px-6 pb-16 w-full text-white">
-    <div class="flex items-center gap-3 mb-6">
+    <div class="flex flex-wrap items-center gap-3 mb-6">
       <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">UNESCO World Heritage</span>
       <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Mata Atlântica</span>
-      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Garganta do Diabo</span>
+      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Parque Nacional do Iguaçu</span>
+      <span class="chip text-white/90 text-xs px-3 py-1 rounded-full bg-white/10">Cataratas Brasil</span>
     </div>
-    <h1 class="font-display font-semibold leading-[0.95] tracking-tight text-5xl md:text-7xl lg:text-8xl max-w-5xl" set:html={_(hero.title)} />
-    <p class="mt-6 max-w-2xl text-white/85 text-lg md:text-xl leading-relaxed">{_(hero.subtitle)}</p>
+    <h1 class="font-display font-semibold leading-[1.02] tracking-tight text-4xl md:text-6xl lg:text-7xl max-w-6xl">
+      Mirante da Garganta do Diabo <span class="text-white/70 text-[0.6em] font-normal align-middle">(Foz do Iguaçu)</span>
+    </h1>
+    <p class="mt-2 max-w-4xl text-white/60 text-sm md:text-base uppercase tracking-[0.2em]">
+      Path Of The Falls Trail · Parque Nacional do Iguaçu · Paraná · Brasil
+    </p>
+    <h2 class="mt-8 max-w-5xl font-display text-3xl md:text-5xl leading-[1.05]" set:html={_(hero.title)} />
+    <p class="mt-6 max-w-2xl text-white/85 text-lg md:text-xl leading-relaxed" set:html={_(hero.subtitle)} />
     <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
-      <div><div class="num-display text-4xl md:text-5xl">4.9</div><div class="text-xs uppercase tracking-widest text-white/70">8,954 {_(hero.statReviews)}</div></div>
+      <div><div class="num-display text-4xl md:text-5xl">4.9</div><div class="text-xs uppercase tracking-widest text-white/70">19,587 {_(hero.statReviews)}</div></div>
       <div><div class="num-display text-4xl md:text-5xl">1.2<span class="text-lg">km</span></div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statLength)}</div></div>
       <div><div class="num-display text-4xl md:text-5xl">275</div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statFalls)}</div></div>
       <div><div class="num-display text-4xl md:text-5xl">1,500<span class="text-lg">m³/s</span></div><div class="text-xs uppercase tracking-widest text-white/70">{_(hero.statFlow)}</div></div>

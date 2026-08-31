@@ -4,26 +4,74 @@ import { footer, partners } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
+
+const mapsEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6394.760838428332!2d-54.4383116!3d-25.6945737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea0b10a0b82f%3A0x222948c7f3092ad8!2sMirante%20da%20Garganta%20do%20Diabo!5e1!3m2!1spt-BR!2s!4v1788141182134!5m2!1spt-BR!2s';
+const mapsShare = 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7';
+const govtTourism = 'https://www.icmbio.gov.br/parnaiguacu';
+const govtTourismLabel = {
+  zh: '巴西伊瓜苏国家公园官方门户',
+  en: 'Brazil / Paraná Official Tourism Portal',
+  es: 'Portal oficial de turismo de Brasil / Paraná',
+  pt: 'Portal oficial do Brasil / Paraná',
+}[lang];
+
+const addressLines = {
+  zh: ['Path Of The Falls Trail — Parque Nacional', 'Foz do Iguaçu — Paraná', '巴西 · Brasil · CEP 85855-750'],
+  en: ['Path Of The Falls Trail — National Park', 'Foz do Iguaçu — Paraná', 'Brazil · CEP 85855-750'],
+  es: ['Sendero de las Cataratas — Parque Nacional', 'Foz do Iguaçu — Paraná', 'Brasil · CEP 85855-750'],
+  pt: ['Trilha das Cataratas — Parque Nacional', 'Foz do Iguaçu — Paraná', 'Brasil · CEP 85855-750'],
+}[lang];
 ---
 <footer class="bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
   <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-6">
       <h2 class="font-display text-4xl md:text-5xl leading-tight" set:html={_(footer.cta)} />
       <p class="mt-6 text-white/70 max-w-md">{_(footer.address)}</p>
+      <div class="mt-8 space-y-1 text-white/80 text-sm">
+        {addressLines.map((l) => <div>{l}</div>)}
+      </div>
+      <div class="mt-4 text-xs text-white/50">
+        Mirante da Garganta do Diabo → Foz do Iguaçu → Paraná → Brasil
+      </div>
     </div>
     <div class="md:col-span-3">
       <div class="text-xs uppercase tracking-widest text-[color:var(--color-sun)] mb-4">Location</div>
       <div class="space-y-1 text-white/80">
-        <div>Plus Code · 8H86+35</div><div>Foz do Iguaçu — PR</div><div>Brasil</div>
-        <div class="mt-4"><a href="https://maps.app.goo.gl/kbFrrWhUT49eiEjk6" target="_blank" rel="noopener" class="link-underline text-[color:var(--color-sun)]">Google Maps →</a></div>
+        <div>Plus Code · 8H56+8Q</div>
+        <div>Foz do Iguaçu — PR</div>
+        <div>Brasil</div>
+        <div class="mt-4"><a href={mapsShare} target="_blank" rel="noopener noreferrer" class="link-underline text-[color:var(--color-sun)]">Google Maps →</a></div>
+        <div class="mt-1"><a href={govtTourism} target="_blank" rel="noopener noreferrer" class="link-underline text-[color:var(--color-sun)] text-xs">{govtTourismLabel} →</a></div>
       </div>
     </div>
     <div class="md:col-span-3">
       <div class="text-xs uppercase tracking-widest text-[color:var(--color-sun)] mb-4">Rating</div>
       <div class="num-display text-5xl">4.9</div>
-      <div class="text-white/60 text-sm">8,954 reviews</div>
+      <div class="text-white/60 text-sm">19,587 reviews</div>
     </div>
   </div>
+
+  <!-- Google Maps Embed -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-sun)] text-center mb-6">
+        Location Map · Mapa de Localização
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <iframe
+          src={mapsEmbedSrc}
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Mirante da Garganta do Diabo — Google Maps"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- Disclaimer + Legal Links -->
   <div class="max-w-7xl mx-auto px-6 pb-10">
     <p class="text-white/50 text-sm leading-relaxed max-w-3xl">⚠️ {_(footer.disclaimer)}</p>

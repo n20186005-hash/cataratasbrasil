@@ -6,7 +6,7 @@ const { lang } = Astro.props;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
 const idx = [1,2,3,4,5,6,7,8,9,12,14,15,16,17,19,20,21,22,23,25];
 const imgs = idx.map(n => `/gallery/trilha-das-cataratas-brasil (${n}).jpg`);
-const gmapsUrl = 'https://maps.app.goo.gl/kbFrrWhUT49eiEjk6';
+const gmapsUrl = 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7';
 const bento = [
   'col-span-8 row-span-2 aspect-[16/10]','col-span-4 aspect-square','col-span-4 aspect-square',
   'md:col-span-4 col-span-6 aspect-[4/3]','md:col-span-4 col-span-6 aspect-[4/3]','md:col-span-4 col-span-12 aspect-[4/3]',
@@ -15,17 +15,39 @@ const bento = [
   'md:col-span-3 col-span-6 aspect-[4/3]','md:col-span-3 col-span-6 aspect-[4/3]','md:col-span-3 col-span-6 aspect-[4/3]','md:col-span-3 col-span-6 aspect-[4/3]',
   'col-span-4 aspect-square','col-span-8 aspect-[16/9]','col-span-6 aspect-[4/3]','col-span-6 aspect-[4/3]',
 ];
+
+const altFn = (lang: Lang, i: number) => {
+  const base: Record<Lang, string> = {
+    zh: `Mirante da Garganta do Diabo 图集 · Cataratas Brasil · 福斯-杜伊瓜苏 第 ${i + 1} 张`,
+    en: `Gallery of Mirante da Garganta do Diabo — Cataratas Brasil, Foz do Iguaçu · photo ${i + 1}`,
+    es: `Galería del Mirante da Garganta del Diablo — Cataratas Brasil, Foz do Iguaçu · foto ${i + 1}`,
+    pt: `Galeria do Mirante da Garganta do Diabo — Cataratas Brasil, Foz do Iguaçu · foto ${i + 1}`,
+  };
+  return base[lang];
+};
 ---
 <section id="gallery" class="bg-[color:var(--color-ink)] text-white py-24 md:py-32 grain">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
       <div><div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-sun)]">06 — {_(gallery.sectionNum)}</div>
-      <h2 class="font-display text-4xl md:text-6xl mt-4">{_(gallery.heading)}</h2></div>
+      <h2 class="font-display text-4xl md:text-6xl mt-4">{_(gallery.heading)}</h2>
+      <p class="mt-3 text-white/50 text-sm max-w-2xl">
+        Gallery & Visual Archive — Mirante da Garganta do Diabo (Foz do Iguaçu) · Cataratas Brasil
+      </p>
+      </div>
     </div>
     <div class="grid grid-cols-12 gap-3 md:gap-4">
       {imgs.map((src, i) => (
         <figure class={`${bento[i] || 'col-span-6 aspect-[4/3]'} rounded-2xl overflow-hidden`}>
-          <img loading="lazy" alt={`Trilha das Cataratas — gallery photo ${i + 1}`} class="w-full h-full object-cover hover:scale-105 transition duration-700" src={src} />
+          <img
+            loading="lazy"
+            decoding="async"
+            alt={altFn(lang, i)}
+            class="w-full h-full object-cover hover:scale-105 transition duration-700"
+            src={src}
+            width="1600"
+            height="1066"
+          />
         </figure>
       ))}
     </div>

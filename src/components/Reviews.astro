@@ -4,12 +4,16 @@ import { reviews } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
-const gmapsUrl = 'https://maps.app.goo.gl/kbFrrWhUT49eiEjk6';
+const gmapsUrl = 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7';
 ---
 <section id="reviews" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
   <div class="flex items-end justify-between flex-wrap gap-6 mb-14">
     <div><div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)]">07 — {_(reviews.sectionNum)}</div>
-    <h2 class="font-display text-4xl md:text-6xl mt-4" set:html={_(reviews.heading)} /></div>
+    <h2 class="font-display text-4xl md:text-6xl mt-4" set:html={_(reviews.heading)} />
+    <p class="mt-3 text-[color:var(--color-moss)]/60 text-sm max-w-2xl italic">
+      Visitor Reviews & Aggregate Rating — Mirante da Garganta do Diabo (Foz do Iguaçu) · Cataratas Brasil
+    </p>
+    </div>
     <div class="flex gap-1 text-3xl text-[color:var(--color-sun)]">★★★★★</div>
   </div>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -4,15 +4,58 @@ import { surrounding } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
+
+const altMap: Record<Lang, string[]> = {
+  zh: [
+    'Parque das Aves — Mirante da Garganta do Diabo 周边 300 米的鸟类公园',
+    'Macuco Safari — Cataratas Brasil 园区内雨林探险和快艇冲瀑',
+    'Itaipu Binacional — 伊泰普水电站，福斯-杜伊瓜苏周边核心地标',
+  ],
+  en: [
+    'Parque das Aves — bird sanctuary 300 m near Mirante da Garganta do Diabo, Cataratas Brasil',
+    'Macuco Safari — jungle jeep and speedboat adventure inside Cataratas Brasil park',
+    'Itaipu Binacional — hydroelectric dam landmark near Cataratas Brasil, Foz do Iguaçu',
+  ],
+  es: [
+    'Parque das Aves — santuario de aves a 300 m cerca del Mirante da Garganta del Diablo',
+    'Macuco Safari — aventura en jeep y lancha dentro del parque Cataratas Brasil',
+    'Itaipu Binacional — represa hidroeléctrica cerca de Cataratas Brasil, Foz do Iguaçu',
+  ],
+  pt: [
+    'Parque das Aves — santuário de aves a 300 m próximo ao Mirante da Garganta do Diabo',
+    'Macuco Safari — aventura de jipe e lancha no parque da Cataratas Brasil',
+    'Itaipu Binacional — usina hidrelétrica próxima à Cataratas Brasil, Foz do Iguaçu',
+  ],
+};
+
+const introMap: Record<Lang, string> = {
+  zh: '游览 Mirante da Garganta do Diabo 时，游客可轻松探索周边的核心地标与历史景点，包括 Parque das Aves 和 Itaipu Binacional。',
+  en: 'When visiting Mirante da Garganta do Diabo, visitors can easily explore surrounding historical landmarks and points of interest, including Parque das Aves and Itaipu Binacional.',
+  es: 'Al visitar el Mirante da Garganta del Diablo, los visitantes pueden explorar fácilmente los puntos de interés cercanos, incluidos Parque das Aves e Itaipu Binacional.',
+  pt: 'Ao visitar o Mirante da Garganta do Diabo, os visitantes podem explorar facilmente os pontos de interesse ao redor, incluindo o Parque das Aves e a Itaipu Binacional.',
+};
 ---
 <section class="bg-[color:var(--color-mist)] py-24 md:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)]">08 — {_(surrounding.sectionNum)}</div>
-    <h2 class="font-display text-4xl md:text-6xl mt-4 mb-14 max-w-3xl" set:html={_(surrounding.heading)} />
-    <div class="grid md:grid-cols-3 gap-5">
-      {surrounding.items.map((card) => (
+    <h2 class="font-display text-4xl md:text-6xl mt-4 max-w-3xl" set:html={_(surrounding.heading)} />
+    <p class="mt-6 max-w-4xl text-[color:var(--color-moss)]/80 text-sm md:text-base italic">
+      Landmarks & Attractions Around Cataratas Brasil · {introMap[lang]}
+    </p>
+    <div class="grid md:grid-cols-3 gap-5 mt-14">
+      {surrounding.items.map((card, i) => (
         <article class="rounded-3xl bg-white overflow-hidden card-hover">
-          <div class="aspect-[4/3] bg-cover bg-center" style={`background-image:url('${card.img}')`}></div>
+          <div class="aspect-[4/3] overflow-hidden">
+            <img
+              src={card.img}
+              alt={altMap[lang][i] || ''}
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover object-center hover:scale-105 transition duration-700"
+              width="800"
+              height="600"
+            />
+          </div>
           <div class="p-6"><h3 class="font-display text-2xl">{card.title}</h3>
           <p class="mt-2 text-[color:var(--color-moss)] text-sm leading-relaxed">{_(card.desc)}</p></div>
         </article>
