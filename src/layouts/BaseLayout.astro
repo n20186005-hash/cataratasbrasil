@@ -3,13 +3,34 @@ import '../styles/global.css';
 import type { Lang } from '../i18n/utils';
 import { LANG_LABELS, LANGUAGES } from '../i18n/utils';
 
-interface Props { lang: Lang; title: string; description: string; }
-const { lang, title, description } = Astro.props;
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  noindex?: boolean;
+  availableLangs?: Lang[];
+}
+const { lang, title, description, noindex = false, availableLangs = LANGUAGES } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const alternates = LANGUAGES.map((l) => {
-  const path = Astro.url.pathname.replace(`/${lang}`, `/${l}`);
-  return { lang: l, href: new URL(path, Astro.site).href };
-});
+
+const HREFLANG: Record<Lang, string> = { zh: 'zh-CN', en: 'en', es: 'es', pt: 'pt-BR', ko: 'ko' };
+const OG_LOCALE: Record<Lang, string> = { zh: 'zh_CN', en: 'en_US', es: 'es_ES', pt: 'pt_BR', ko: 'ko_KR' };
+
+// Replace the leading language prefix of the current path with the target language.
+function withLang(pathname: string, from: Lang, to: Lang): string {
+  const base = `/${from}`;
+  if (pathname === base || pathname === `${base}/`) return `/${to}/`;
+  if (pathname.startsWith(`${base}/`)) return pathname.replace(`${base}/`, `/${to}/`);
+  return pathname;
+}
+
+// Alternate language versions that actually exist for this page.
+const alternates = availableLangs
+  .filter((l) => l !== lang)
+  .map((l) => ({ code: HREFLANG[l], href: new URL(withLang(Astro.url.pathname, lang, l), Astro.site).href }));
+
+// x-default points to the default-language (pt) version of the same page.
+const xDefault = new URL(withLang(Astro.url.pathname, lang, 'pt'), Astro.site).href;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -18,12 +39,14 @@ const alternates = LANGUAGES.map((l) => {
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+  {alternates.map((a) => <link rel="alternate" hreflang={a.code} href={a.href} />)}
+  <link rel="alternate" hreflang="x-default" href={xDefault} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : lang === 'pt' ? 'pt_BR' : lang === 'es' ? 'es_AR' : 'en_US'} />
+  <meta property="og:locale" content={OG_LOCALE[lang]} />
   <meta property="og:image" content="https://cataratasbrasil.com/gallery/trilha-das-cataratas-brasil%20(6).jpg" />
   <meta property="og:image:alt" content={`Mirante da Garganta do Diabo - Main view in Foz do Iguaçu, Brazil`} />
   <meta property="og:image:width" content="1920" />

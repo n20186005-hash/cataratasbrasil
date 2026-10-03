@@ -14,21 +14,22 @@ const descMap: Record<Lang, string> = {
   en: 'Comprehensive visitor guide to Mirante da Garganta do Diabo in Foz do Iguaçu, Paraná, Brazil — the core viewpoint of Iguaçu National Park.',
   es: 'Guía integral del visitante para el Mirante da Garganta del Diablo en Foz do Iguaçu, Paraná, Brasil — el mirador central del Parque Nacional de Iguazú.',
   pt: 'Guia completo do visitante para o Mirante da Garganta do Diabo em Foz do Iguaçu, Paraná, Brasil — o mirante central do Parque Nacional do Iguaçu.',
+  ko: '브라질 파라나주 포스두이구아수 이구아수 국립공원의 핵심 전망대, 악마의 목구멍(Mirante da Garganta do Diabo) 종합 방문 가이드.',
 };
 
 const tourist = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': 'TouristAttraction',
+  '@type': ['TouristAttraction', 'Place'],
   '@id': `${siteUrl}/#attraction`,
   name: 'Mirante da Garganta do Diabo',
-  alternateName: ['Cataratas Brasil', 'Foz do Iguaçu Mirante da Garganta do Diabo', 'Garganta do Diabo Viewpoint'],
+  alternateName: ['Cataratas Brasil', 'Foz do Iguaçu Mirante da Garganta do Diabo', 'Garganta do Diabo Viewpoint', '악마의 목구멍 전망대'],
   description: descMap[lang],
-  url: siteUrl,
+  url: `${siteUrl}/${lang}/`,
   image: [heroImage],
   isAccessibleForFree: true,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Path Of The Falls Trail - Parque Nacional',
+    streetAddress: 'Trilha das Cataratas - Parque Nacional do Iguaçu',
     addressLocality: 'Foz do Iguaçu',
     addressRegion: 'Paraná',
     postalCode: '85855-750',
@@ -41,14 +42,56 @@ const tourist = JSON.stringify({
   },
   hasMap: mapsShare,
   sameAs: [mapsShare, govtTourism],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '19587',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  openingHours: 'Mo-Su 09:00-16:00',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '16:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '08:30',
+      closes: '16:00',
+    },
+  ],
+});
+
+const webSite = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Cataratas Brasil',
+  url: siteUrl,
+  inLanguage: lang,
+});
+
+const webPage = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Mirante da Garganta do Diabo',
+  url: `${siteUrl}/${lang}/`,
+  inLanguage: lang,
+  isPartOf: { '@type': 'WebSite', name: 'Cataratas Brasil', url: siteUrl },
+});
+
+const breadcrumb = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Cataratas Brasil',
+      item: `${siteUrl}/${lang}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Mirante da Garganta do Diabo',
+      item: `${siteUrl}/${lang}/`,
+    },
+  ],
 });
 
 const faqDataMap: Record<Lang, any> = {
@@ -61,7 +104,7 @@ const faqDataMap: Record<Lang, any> = {
         name: 'Where is Mirante da Garganta do Diabo located?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Mirante da Garganta do Diabo is located in Foz do Iguaçu, Paraná, Brazil, at the end of the Path Of The Falls Trail within Iguaçu National Park.',
+          text: 'Mirante da Garganta do Diabo is located in Foz do Iguaçu, Paraná, Brazil, at the end of the Trilha das Cataratas trail within Iguaçu National Park.',
         },
       },
       {
@@ -77,7 +120,7 @@ const faqDataMap: Record<Lang, any> = {
         name: 'Is the trail physically demanding?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Not at all. Just 1.2 km on paved, gently graded paths — friendly to all ages and fully wheelchair accessible.',
+          text: 'Not at all. About 1.5 km on paved, gently graded paths — friendly to all ages and fully wheelchair accessible.',
         },
       },
       {
@@ -123,7 +166,7 @@ const faqDataMap: Record<Lang, any> = {
         name: 'A trilha é de esforço físico intenso?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'De forma alguma. São apenas 1,2 km em caminhos pavimentados com leve declive — acessível a todas as idades e totalmente adaptado para cadeirantes.',
+          text: 'De forma alguma. São cerca de 1,5 km em caminhos pavimentados com leve declive — acessível a todas as idades e totalmente adaptado para cadeirantes.',
         },
       },
       {
@@ -169,7 +212,7 @@ const faqDataMap: Record<Lang, any> = {
         name: '¿El sendero exige esfuerzo físico intenso?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Para nada. Son solo 1,2 km en caminos pavimentados con pendiente suave — accesible a todas las edades y totalmente habilitado para sillas de ruedas.',
+          text: 'Para nada. Son unos 1,5 km en caminos pavimentados con pendiente suave — accesible a todas las edades y totalmente habilitado para sillas de ruedas.',
         },
       },
       {
@@ -215,7 +258,7 @@ const faqDataMap: Record<Lang, any> = {
         name: '步道需要消耗大量体力吗？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '完全不费力。全程仅 1.2 公里，路面平整、坡度平缓，适合所有年龄游客，并且全程无障碍通行。',
+          text: '完全不费力。全程约 1.5 公里，路面平整、坡度平缓，适合所有年龄游客，并且全程无障碍通行。',
         },
       },
       {
@@ -236,8 +279,54 @@ const faqDataMap: Record<Lang, any> = {
       },
     ],
   },
+  ko: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: '악마의 목구멍 전망대는 어디에 있나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '악마의 목구멍 전망대(Mirante da Garganta do Diabo)는 브라질 파라나주 포스두이구아수에 위치하며, 이구아수 국립공원 내 트릴랴 다스 카타라타스(Trilha das Cataratas) 산책로 끝에 있습니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '전망대 입장은 무료인가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '악마의 목구멍 전망대는 이구아수 국립공원 입장권에 포함되어 있습니다. 공원 입장료는 유료이지만, 입장 후 전망대 자체 이용은 무료입니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '산책로가 힘든가요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '전혀 아닙니다. 포장된 완만한 길 약 1.5km로 모든 연령이 편하게 걸을 수 있으며 휠체어도 완전히 이용 가능합니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '브라질 측과 아르헨티나 측의 차이는?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '브라질 측은 폭포 전체 시스템의 파노라마 전망을 제공하고, 아르헨티나 측은 상부 산책로를 통해 폭포 속으로 안내합니다.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: '언제 방문하는 것이 가장 좋나요?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '오전 9시 개장 때 입장하면 인파를 피할 수 있습니다. 오후 2–4시에는 악마의 목구멍 위로 무지개가 뜰 확률이 가장 높습니다.',
+        },
+      },
+    ],
+  },
 };
 
 const faqData = JSON.stringify(faqDataMap[lang]);
 ---
-<Fragment set:html={'<script type="application/ld+json">' + tourist + '</script><script type="application/ld+json">' + faqData + '</script>'} />
+<Fragment set:html={'<script type="application/ld+json">' + tourist + '</script><script type="application/ld+json">' + webSite + '</script><script type="application/ld+json">' + webPage + '</script><script type="application/ld+json">' + breadcrumb + '</script><script type="application/ld+json">' + faqData + '</script>'} />

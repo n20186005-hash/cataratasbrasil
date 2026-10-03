@@ -13,7 +13,7 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
 ---
-<BaseLayout lang={lang} title={_(terms.title)} description={_(terms.title)}>
+<BaseLayout lang={lang} title={_(terms.title)} description={_(terms.title)} noindex>
   <Nav lang={lang} />
   <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
     <h1 class="font-display text-4xl md:text-5xl mt-10 mb-4">{_(terms.h1)}</h1>

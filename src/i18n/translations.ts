@@ -7,15 +7,15 @@ export const t = (s: Record<string, string> | string, lang: Lang): string =>
 
 // ── Nav ──
 export const nav = {
-  overview: { zh: '前言', en: 'Preamble', es: 'Preámbulo', pt: 'Preâmbulo' } as T,
-  highlights: { zh: '亮点', en: 'Highlights', es: 'Destacados', pt: 'Destaques' } as T,
-  guide: { zh: '游览指南', en: 'Guide', es: 'Guía', pt: 'Guia' } as T,
-  transport: { zh: '交通', en: 'Transport', es: 'Transporte', pt: 'Transporte' } as T,
-  reviews: { zh: '评价', en: 'Reviews', es: 'Reseñas', pt: 'Avaliações' } as T,
-  encyclopedia: { zh: '百科', en: 'Encyclopedia', es: 'Enciclopedia', pt: 'Enciclopédia' } as T,
-  ecology: { zh: '生态', en: 'Ecology', es: 'Ecología', pt: 'Ecologia' } as T,
-  gallery: { zh: '图集', en: 'Gallery', es: 'Galería', pt: 'Galeria' } as T,
-  faq: { zh: '指南', en: 'Guide', es: 'Guía', pt: 'Guia' } as T,
+  overview: { zh: '前言', en: 'Preamble', es: 'Preámbulo', pt: 'Preâmbulo', ko: '머리말' } as T,
+  highlights: { zh: '亮点', en: 'Highlights', es: 'Destacados', pt: 'Destaques', ko: '하이라이트' } as T,
+  guide: { zh: '游览指南', en: 'Guide', es: 'Guía', pt: 'Guia', ko: '방문 가이드' } as T,
+  transport: { zh: '交通', en: 'Transport', es: 'Transporte', pt: 'Transporte', ko: '교통' } as T,
+  reviews: { zh: '评价', en: 'Reviews', es: 'Reseñas', pt: 'Avaliações', ko: '방문 후기' } as T,
+  encyclopedia: { zh: '百科', en: 'Encyclopedia', es: 'Enciclopedia', pt: 'Enciclopédia', ko: '백과' } as T,
+  ecology: { zh: '生态', en: 'Ecology', es: 'Ecología', pt: 'Ecologia', ko: '생태' } as T,
+  gallery: { zh: '图集', en: 'Gallery', es: 'Galería', pt: 'Galeria', ko: '갤러리' } as T,
+  faq: { zh: '指南', en: 'Guide', es: 'Guía', pt: 'Guia', ko: '가이드' } as T,
 };
 
 // ── Hero ──
@@ -23,92 +23,101 @@ export const hero = {
   title: {
     zh: '伊瓜苏瀑布<br/><span class="italic text-[color:var(--color-sun)]">震撼观景</span>步道',
     en: 'Where the forest<br/><span class="italic text-[color:var(--color-sun)]">meets the roar</span>.',
-    es: 'Donde la selva<br/><span class="italic text-[color:var(--color-sun)]">encuentra el rugido</span>.',
+es: 'Donde la selva<br/><span class="italic text-[color:var(--color-sun)]">encuentra el rugido</span>.',
     pt: 'Onde a mata<br/><span class="italic text-[color:var(--color-sun)]">encontra o rugido</span>.',
+    ko: '숲이<br/><span class="italic text-[color:var(--color-sun)]">포효와 맞닿는</span> 곳.',
   } as T,
   subtitle: {
-    zh: '欢迎来到 <strong>Mirante da Garganta do Diabo</strong>，即闻名遐迩的核心 <strong>Cataratas Brasil</strong>。位于 <strong>Foz do Iguaçu</strong>、<strong>Paraná</strong>、<strong>Brasil</strong> 的心脏地带——1.2 公里全景栈道，一路走进魔鬼之喉的水雾之中。',
-    en: 'Welcome to <strong>Mirante da Garganta do Diabo</strong>, widely recognized as the central <strong>Cataratas Brasil</strong>. Located in the heart of <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brazil</strong> — the 1.2 km panoramic boardwalk that carries you straight into the mist of the Devil\'s Throat.',
-    es: 'Bienvenido al <strong>Mirante da Garganta del Diablo</strong>, ampliamente reconocido como el <strong>Cataratas Brasil</strong> central. Ubicado en el corazón de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong> — el sendero panorámico de 1,2 km que te lleva directo a la niebla de la Garganta del Diablo.',
-    pt: 'Bem-vindo ao <strong>Mirante da Garganta do Diabo</strong>, amplamente reconhecido como o coração da <strong>Cataratas Brasil</strong>. Localizado no coração de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong> — 1,2 km de passarela panorâmica levando você direto à névoa da Garganta do Diabo.',
+    zh: '欢迎来到 <strong>Mirante da Garganta do Diabo</strong>，即闻名遐迩的核心 <strong>Cataratas Brasil</strong>。位于 <strong>Foz do Iguaçu</strong>、<strong>Paraná</strong>、<strong>Brasil</strong> 的心脏地带——约 1.5 公里全景栈道，一路走进魔鬼之喉的水雾之中。',
+    en: 'Welcome to <strong>Mirante da Garganta do Diabo</strong>, widely recognized as the central <strong>Cataratas Brasil</strong>. Located in the heart of <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brazil</strong> — the ~1.5 km panoramic boardwalk that carries you straight into the mist of the Devil\'s Throat.',
+    es: 'Bienvenido al <strong>Mirante da Garganta del Diablo</strong>, ampliamente reconocido como el <strong>Cataratas Brasil</strong> central. Ubicado en el corazón de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong> — el sendero panorámico de 1,5 km que te lleva directo a la niebla de la Garganta del Diablo.',
+    pt: 'Bem-vindo ao <strong>Mirante da Garganta do Diabo</strong>, ampliamente reconhecido como o coração da <strong>Cataratas Brasil</strong>. Localizado no coração de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong> — 1,5 km de passarela panorâmica levando você direto à névoa da Garganta do Diabo.',
+    ko: '<strong>Mirante da Garganta do Diabo(악마의 목구멍 전망대)</strong>는 브라질 <strong>Cataratas Brasil(이구아수 폭포)</strong>의 심장입니다. <strong>Foz do Iguaçu(포스두이구아수)</strong>, <strong>Paraná(파라나)</strong>, <strong>Brasil(브라질)</strong> 한가운데에서 약 1.5km의 전망 산책로가 당신을 악마의 목구멍 물안개 속으로 안내합니다.',
   } as T,
-  statReviews: { zh: '评价', en: 'reviews', es: 'reseñas', pt: 'avaliações' } as T,
-  statLength: { zh: '步道长度', en: 'Trail length', es: 'Longitud', pt: 'Extensão' } as T,
-  statFalls: { zh: '瀑布数量', en: 'Waterfalls', es: 'Cascadas', pt: 'Quedas' } as T,
-  statFlow: { zh: '平均流量', en: 'Avg. flow', es: 'Caudal medio', pt: 'Vazão média' } as T,
+  statReviews: { zh: '评价', en: 'reviews', es: 'reseñas', pt: 'avaliações', ko: '리뷰' } as T,
+  statLength: { zh: '步道长度', en: 'Trail length', es: 'Longitud', pt: 'Extensão', ko: '산책로 길이' } as T,
+  statFalls: { zh: '瀑布数量', en: 'Waterfalls', es: 'Cascadas', pt: 'Quedas', ko: '폭포 수' } as T,
+  statFlow: { zh: '平均流量', en: 'Avg. flow', es: 'Caudal medio', pt: 'Vazão média', ko: '평균 유량' } as T,
 };
 
 // ── Manifesto (网站前言) ──
 export const manifesto = {
-  sectionNum: { zh: '前言', en: 'Preamble', es: 'Preámbulo', pt: 'Preâmbulo' } as T,
+  sectionNum: { zh: '前言', en: 'Preamble', es: 'Preámbulo', pt: 'Preâmbulo', ko: '머리말' } as T,
   heading: {
     zh: '敬畏自然<br/><em class="text-[color:var(--color-emerald)]">守护永恒</em>',
     en: 'Reverence for nature.<br/><em class="text-[color:var(--color-emerald)]">A vow for eternity.</em>',
     es: 'Reverencia a la naturaleza.<br/><em class="text-[color:var(--color-emerald)]">Un voto por la eternidad.</em>',
     pt: 'Reverência à natureza.<br/><em class="text-[color:var(--color-emerald)]">Um voto pela eternidade.</em>',
+    ko: '자연에 대한 경외<br/><em class="text-[color:var(--color-emerald)]">영원을 위한 서약</em>',
   } as T,
   subheading: {
     zh: '致每一位自然观察者',
     en: 'To every observer of the natural world',
     es: 'A cada observador del mundo natural',
     pt: 'A cada observador do mundo natural',
+    ko: '자연을 관찰하는 모든 이에게',
   } as T,
   p1: {
     zh: '欢迎来到 <strong>Mirante da Garganta do Diabo</strong>，即闻名遐迩的核心 <strong>Cataratas Brasil</strong>。位于 <strong>Foz do Iguaçu</strong>（福斯-杜伊瓜苏）、<strong>Paraná</strong>（巴拉那州）、<strong>Brasil</strong>（巴西）的心脏地带，本目的地是到访该区域旅行者的首要门户。Mirante da Garganta do Diabo → Foz do Iguaçu → Paraná → Brasil。在这里，水不仅仅是流动的物质，而是雕刻地球的刻刀，是孕育生命的血脉。伊瓜苏瀑布（Cataratas do Iguaçu）是世界上最宽阔的瀑布群。当我们站在 Trilha das Cataratas 的栈道上，感受每秒 1,500 立方米的水流坠入"魔鬼之喉"的轰鸣时，人类的渺小与大自然的伟大瞬间完成交汇。',
     en: 'Welcome to <strong>Mirante da Garganta do Diabo</strong>, widely recognized as the central <strong>Cataratas Brasil</strong>. Located in the heart of <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brazil</strong>, this destination serves as a primary hub for travelers visiting the region. Mirante da Garganta do Diabo → Foz do Iguaçu → Paraná → Brazil. Here, water is not merely matter in motion — it is the chisel that sculpts the Earth, the bloodstream that nourishes life. The Iguaçu Falls (Cataratas do Iguaçu) form the widest waterfall system on the planet. When you stand on the Trilha das Cataratas boardwalk and feel 1,500 cubic metres of water per second plunge into the Devil\'s Throat, human smallness and nature\'s grandeur collide in a single, humbling instant.',
     es: 'Bienvenido al <strong>Mirante da Garganta del Diablo</strong>, ampliamente reconocido como el <strong>Cataratas Brasil</strong> central. Ubicado en el corazón de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong>, este destino sirve como eje principal para los viajeros que visitan la región. Mirante da Garganta del Diablo → Foz do Iguaçu → Paraná → Brasil. Aquí, el agua no es solo materia en movimiento: es el cincel que esculpe la Tierra, el torrente sanguíneo que nutre la vida. Las Cataratas del Iguazú constituyen el sistema de cascadas más ancho del planeta. Cuando te paras en la pasarela de la Trilha das Cataratas y sientes 1.500 metros cúbicos de agua por segundo precipitarse en la Garganta del Diablo, la pequeñez humana y la grandeza de la naturaleza colisionan en un solo instante de humildad.',
     pt: 'Bem-vindo ao <strong>Mirante da Garganta do Diabo</strong>, amplamente reconhecido como o coração da <strong>Cataratas Brasil</strong>. Localizado no coração de <strong>Foz do Iguaçu</strong>, <strong>Paraná</strong>, <strong>Brasil</strong>, este destino serve como o principal ponto de chegada para os viajantes que visitam a região. Mirante da Garganta do Diabo → Foz do Iguaçu → Paraná → Brasil. Aqui, a água não é apenas matéria em movimento — é o cinzel que esculpe a Terra, a corrente sanguínea que nutre a vida. As Cataratas do Iguaçu formam o sistema de quedas d\'água mais largo do planeta. Quando você está na passarela da Trilha das Cataratas e sente 1.500 metros cúbicos de água por segundo despencarem na Garganta do Diabo, a pequenez humana e a grandeza da natureza colidem em um único instante de humildade.',
+    ko: '이곳은 널리 <strong>Mirante da Garganta do Diabo(악마의 목구멍 전망대)</strong>로 알려진 <strong>Cataratas Brasil(이구아수 폭포)</strong>의 중심입니다. <strong>Foz do Iguaçu(포스두이구아수)</strong>, <strong>Paraná(파라나)</strong>, <strong>Brasil(브라질)</strong> 한가운데에 자리한 이곳은 이 지역을 찾는 여행자의 주요 관문입니다. 여기서 물은 단순히 흐르는 물질이 아니라 지구를 조각하는 조각도요, 생명을 키우는 혈관입니다. 이구아수 폭포(Cataratas do Iguaçu)는 지구상에서 가장 넓은 폭포 시스템입니다. 트릴랴 다스 카타라타스(Trilha das Cataratas) 데크에 서서 초당 1,500세제곱미터의 물이 악마의 목구멍으로 쏟아지는 포효를 느낄 때, 인간의 나약함과 자연의 위대함이 하나로 부딪힙니다.',
   } as T,
   p2: {
     zh: '然而，在这令人窒息的壮丽背后，隐藏着一种极度的脆弱。拥抱这片瀑布的大西洋原始雨林（Mata Atlântica），曾覆盖巴西东海岸超过 130 万平方公里的土地，而如今，未经破坏的原始林区仅存不到 <strong>12%</strong>。伊瓜苏国家公园，正是这片古老雨林在内陆最后的生态堡垒之一。',
     en: 'Yet behind this breathtaking majesty lies a profound fragility. The Atlantic Rainforest (Mata Atlântica) that embraces these falls once covered over 1.3 million square kilometres of Brazil\'s eastern coast. Today, less than <strong>12%</strong> of the original undisturbed forest remains. Iguaçu National Park stands as one of the last inland ecological strongholds of this ancient biome.',
     es: 'Pero detrás de esta majestuosidad impresionante yace una fragilidad profunda. La Selva Atlántica (Mata Atlântica) que abraza estas cataratas cubrió una vez más de 1,3 millones de kilómetros cuadrados de la costa este de Brasil. Hoy, menos del <strong>12%</strong> del bosque original intacto permanece. El Parque Nacional do Iguaçu es uno de los últimos bastiones ecológicos del interior de este antiguo bioma.',
     pt: 'Mas por trás dessa majestade de tirar o fôlego está uma fragilidade profunda. A Mata Atlântica que abraça essas cataratas já cobriu mais de 1,3 milhão de quilômetros quadrados da costa leste do Brasil. Hoje, menos de <strong>12%</strong> da floresta original intacta permanece. O Parque Nacional do Iguaçu é um dos últimos bastiões ecológicos do interior deste bioma ancestral.',
+    ko: '하지만 이 숨 막히는 장엄함 뒤에는 깊은 취약성이 숨어 있습니다. 이 폭포를 감싸안은 대서양림(Mata Atlântica)은 한때 브라질 동부 해안 130만 제곱킬로미터 이상을 덮었으나, 오늘날 원래의 온전한 숲은 12% 미만만 남았습니다. 이구아수 국립공원은 이 고대 생태계가 내륙에 남긴 마지막 보루 중 하나입니다.',
   } as T,
   p3: {
-    zh: '作为一家非盈利科普机构，我们建立本网站，不仅为了向您展示如何抵达这里，更为了邀请您成为这片土地的<strong>"守护者"</strong>。当您踏上这条 1.2 公里的步道时，您不仅是一名游客，更是 1.3 亿年地质史的见证人，是无数濒危巨嘴鸟与美洲豹的隐形客。',
-    en: 'As a non-profit educational initiative, we built this website not merely to show you how to get here, but to invite you to become a <strong>guardian</strong> of this land. When you step onto this 1.2-kilometre trail, you are not just a visitor — you are a witness to 130 million years of geological history, an invisible guest of countless endangered toucans and jaguars.',
-    es: 'Como iniciativa educativa sin fines de lucro, construimos este sitio web no solo para mostrarle cómo llegar, sino para invitarle a convertirse en un <strong>guardián</strong> de esta tierra. Cuando pise este sendero de 1,2 kilómetros, no será solo un visitante: será testigo de 130 millones de años de historia geológica, un huésped invisible de innumerables tucanes y jaguares amenazados.',
-    pt: 'Como iniciativa educacional sem fins lucrativos, construímos este site não apenas para mostrar como chegar, mas para convidá-lo a se tornar um <strong>guardião</strong> desta terra. Quando você pisar nesta trilha de 1,2 quilômetro, não será apenas um visitante — será testemunha de 130 milhões de anos de história geológica, um hóspede invisível de inúmeros tucanos e onças-pintadas ameaçados.',
+    zh: '作为一家非盈利科普机构，我们建立本网站，不仅为了向您展示如何抵达这里，更为了邀请您成为这片土地的<strong>"守护者"</strong>。当您踏上这条约 1.5 公里的步道时，您不仅是一名游客，更是 1.3 亿年地质史的见证人，是无数濒危巨嘴鸟与美洲豹的隐形客。',
+    en: 'As a non-profit educational initiative, we built this website not merely to show you how to get here, but to invite you to become a <strong>guardian</strong> of this land. When you step onto this ~1.5-kilometre trail, you are not just a visitor — you are a witness to 130 million years of geological history, an invisible guest of countless endangered toucans and jaguars.',
+    es: 'Como iniciativa educativa sin fines de lucro, construimos este sitio web no solo para mostrarle cómo llegar, sino para invitarle a convertirse en un <strong>guardián</strong> de esta tierra. Cuando pise este sendero de 1,5 kilómetros, no será solo un visitante: será testigo de 130 millones de años de historia geológica, un huésped invisible de innumerables tucanes y jaguares amenazados.',
+    pt: 'Como iniciativa educacional sem fins lucrativos, construímos este site não apenas para mostrar como chegar, mas para convidá-lo a se tornar um <strong>guardião</strong> desta terra. Quando você pisar nesta trilha de 1,5 quilômetro, não será apenas um visitante — será testemunha de 130 milhões de anos de história geológica, um hóspede invisível de inúmeros tucanos e onças-pintadas ameaçados.',
+    ko: '비영리 교육 기관으로서 우리는 이 사이트를 단순히 오는 법을 알리기 위해 만든 것이 아니라, 당신이 이 땅의 <strong>수호자</strong>가 되기를 초대하기 위해 만들었습니다. 약 1.5km의 산책로를 걸을 때 당신은 관광객 그 이상이며, 1억 3천만 년 지질사의 증인이자 수많은 멸종위기 큰부리새와 재규어의 보이지 않는 손님입니다.',
   } as T,
   closing: {
     zh: '带走知识与震撼，留下纯净与尊重。<br/>让这片"大水"（I-Guazú）的轰鸣，能在未来的千百年里，继续在人类文明的边缘回荡。',
     en: 'Take away knowledge and awe. Leave behind purity and respect.<br/>Let the roar of this "great water" — I-Guazú — echo at the edge of human civilisation for millennia to come.',
     es: 'Llévese conocimiento y asombro. Deje pureza y respeto.<br/>Que el rugido de esta "agua grande" — I-Guazú — siga resonando al borde de la civilización humana por milenios más.',
     pt: 'Leve conhecimento e assombro. Deixe pureza e respeito.<br/>Que o rugido desta "água grande" — I-Guazú — continue ecoando à margem da civilização humana por milênios.',
+    ko: '지식과 경이로움을 가지고 떠나고, 순수함과 존중을 남기세요.<br/>이 "큰 물"(I-Guazú)의 포효가 수천 년 동안 인류 문명의 가장자리에서 울려 퍼지길 바랍니다.',
   } as T,
-  chip1: { zh: '世界自然遗产', en: 'World Heritage', es: 'Patrimonio Mundial', pt: 'Patrimônio Mundial' } as T,
-  chip2: { zh: '跨国大瀑布', en: 'Transnational Falls', es: 'Cataratas binacionales', pt: 'Cataratas binacionais' } as T,
-  chip3: { zh: '仅存 12% 原始雨林', en: 'Only 12% forest remains', es: 'Solo 12% de selva queda', pt: 'Apenas 12% da mata resta' } as T,
-  chip4: { zh: '非盈利科普', en: 'Non-profit educational', es: 'Educativo sin fines de lucro', pt: 'Educacional sem fins lucrativos' } as T,
+  chip1: { zh: '世界自然遗产', en: 'World Heritage', es: 'Patrimonio Mundial', pt: 'Patrimônio Mundial', ko: '세계 자연유산' } as T,
+  chip2: { zh: '跨国大瀑布', en: 'Transnational Falls', es: 'Cataratas binacionales', pt: 'Cataratas binacionais', ko: '국경을 넘는 폭포' } as T,
+  chip3: { zh: '仅存 12% 原始雨林', en: 'Only 12% forest remains', es: 'Solo 12% de selva queda', pt: 'Apenas 12% da mata resta', ko: '원시림 12%만 잔존' } as T,
+  chip4: { zh: '非盈利科普', en: 'Non-profit educational', es: 'Educativo sin fines de lucro', pt: 'Educacional sem fins lucrativos', ko: '비영리 교육' } as T,
 };
 
 // ── Highlights ──
 export const highlights = {
-  sectionNum: { zh: '游览亮点', en: 'Highlights', es: 'Destacados', pt: 'Destaques' } as T,
+  sectionNum: { zh: '游览亮点', en: 'Highlights', es: 'Destacados', pt: 'Destaques', ko: '하이라이트' } as T,
   heading: {
     zh: '三重感官<em class="text-[color:var(--color-sun)]">洗礼</em>',
     en: 'Three sensory<em class="text-[color:var(--color-sun)]"> baptisms</em>',
     es: 'Tres bautismos<em class="text-[color:var(--color-sun)]"> sensoriales</em>',
     pt: 'Três batismos<em class="text-[color:var(--color-sun)]"> sensoriais</em>',
+    ko: '세 가지 감각의<em class="text-[color:var(--color-sun)]"> 세례</em>',
   } as T,
   items: [
     {
       icon: '🚶‍♂️', num: '01',
-      title: { zh: '峡谷悬崖漫步', en: 'Canyon-rim walk', es: 'Paseo por el cañón', pt: 'Caminhada no cânion' } as T,
-      desc: { zh: '平整石板 + 木栈道，坡度平缓，老人小孩都能轻松走完。沿途多个突出观景台是绝佳摄影点。', en: 'Smooth stone and wooden boardwalks with gentle grades — easy for elders and kids. Multiple cantilevered decks along the way for photos.', es: 'Piedra lisa y pasarelas de madera con pendientes suaves — accesible para todos. Múltiples miradores para fotos.', pt: 'Pedras planas e passarelas de madeira com inclinação suave — acessível a todos. Vários mirantes para fotos.' } as T,
+      title: { zh: '峡谷悬崖漫步', en: 'Canyon-rim walk', es: 'Paseo por el cañón', pt: 'Caminhada no cânion', ko: '협곡 가장자리 산책' } as T,
+      desc: { zh: '平整石板 + 木栈道，坡度平缓，老人小孩都能轻松走完。沿途多个突出观景台是绝佳摄影点。', en: 'Smooth stone and wooden boardwalks with gentle grades — easy for elders and kids. Multiple cantilevered decks along the way for photos.', es: 'Piedra lisa y pasarelas de madera con pendientes suaves — accesible para todos. Múltiples miradores para fotos.', pt: 'Pedras planas e passarelas de madeira com inclinação suave — acessível a todos. Vários mirantes para fotos.', ko: '평평한 돌길과 목재 데크로 경사가 완만해 노약자와 아이도 편하게 걸을 수 있습니다. 곳곳에 튀어나온 전망대는 사진 명소입니다.' } as T,
       img: '/gallery/trilha-das-cataratas-brasil (1).jpg',
     },
     {
       icon: '💦', num: '02',
       title: { zh: '水上栈道洗礼', en: 'The mist catwalk', es: 'Pasarela de niebla', pt: 'Passarela na névoa' } as T,
-      desc: { zh: '靠近魔鬼之喉的水上栈道，瀑布激起的水雾像下雨一样把人淋透，是最原始的大自然礼赞。', en: 'Near the Devil\'s Throat, spray from the falls soaks you like a downpour — a raw, elemental encounter with the falls.', es: 'Cerca de la Garganta del Diablo, el rocío te empapa como un aguacero — un encuentro puro con la fuerza del agua.', pt: 'Perto da Garganta do Diabo, a névoa encharca você como uma chuva — um encontro cru com a força da água.' } as T,
+      desc: { zh: '靠近魔鬼之喉的水上栈道，瀑布激起的水雾像下雨一样把人淋透，是最原始的大自然礼赞。', en: 'Near the Devil\\'s Throat, spray from the falls soaks you like a downpour — a raw, elemental encounter with the falls.', es: 'Cerca de la Garganta del Diablo, el rocío te empapa como un aguacero — un encuentro puro con la fuerza del agua.', pt: 'Perto da Garganta do Diabo, a névoa encharca você como uma chuva — um encontro cru com a força da água.', ko: '악마의 목구멍 가까이에서 폭포가 만들어내는 물안개가 소나기처럼 몸을 적십니다. 자연 그 자체와 마주하는 원초적인 경험입니다.' } as T,
       img: '/gallery/trilha-das-cataratas-brasil (2).jpg',
     },
     {
       icon: '🛗', num: '03',
-      title: { zh: '全景电梯', en: 'Panoramic elevator', es: 'Ascensor panorámico', pt: 'Elevador panorâmico' } as T,
-      desc: { zh: '步道终点连接下层水面栈道与上层 Porto Canoas 休息区。上升过程俯瞰整个瀑布群壮阔宏图。', en: 'Links the lower catwalk to Porto Canoas. Watch the entire falls system unfurl beneath you as it rises.', es: 'Conecta la pasarela inferior con Porto Canoas. Ve el sistema completo desplegarse mientras subes.', pt: 'Liga a passarela inferior a Porto Canoas. Todo o conjunto se abre abaixo enquanto sobe.' } as T,
+      title: { zh: '全景电梯', en: 'Panoramic elevator', es: 'Ascensor panorámico', pt: 'Elevador panorâmico', ko: '파노라마 엘리베이터' } as T,
+      desc: { zh: '步道终点连接下层水面栈道与上层 Porto Canoas 休息区。上升过程俯瞰整个瀑布群壮阔宏图。', en: 'Links the lower catwalk to Porto Canoas. Watch the entire falls system unfurl beneath you as it rises.', es: 'Conecta la pasarela inferior con Porto Canoas. Ve el sistema completo desplegarse mientras subes.', pt: 'Liga a passarela inferior a Porto Canoas. Todo o conjunto se abre abaixo enquanto sobe.', ko: '하층 데크와 상층의 포르투 카노아스 휴게区을 연결합니다. 올라가며 폭포 전체가 펼쳐지는 모습을 내려다볼 수 있습니다.' } as T,
       img: '/gallery/trilha-das-cataratas-brasil (3).jpg',
     },
   ],
@@ -116,25 +125,25 @@ export const highlights = {
 
 // ── Practical Info ──
 export const practical = {
-  sectionNum: { zh: '实用游览指南', en: 'Practical Guide', es: 'Guía práctica', pt: 'Guia prático' } as T,
-  heading: { zh: '出发前<em class="text-[color:var(--color-emerald)]">必读</em>', en: 'Read this<em class="text-[color:var(--color-emerald)]"> before you go</em>.', es: 'Léelo<em class="text-[color:var(--color-emerald)]"> antes de ir</em>.', pt: 'Leia<em class="text-[color:var(--color-emerald)]"> antes de ir</em>.' } as T,
+  sectionNum: { zh: '实用游览指南', en: 'Practical Guide', es: 'Guía práctica', pt: 'Guia prático', ko: '실용 가이드' } as T,
+  heading: { zh: '出发前<em class="text-[color:var(--color-emerald)]">必读</em>', en: 'Read this<em class="text-[color:var(--color-emerald)]"> before you go</em>.', es: 'Léelo<em class="text-[color:var(--color-emerald)]"> antes de ir</em>.', pt: 'Leia<em class="text-[color:var(--color-emerald)]"> antes de ir</em>.', ko: '방문 전<em class="text-[color:var(--color-emerald)]"> 꼭 읽기</em>' } as T,
   cards: [
-    { icon: '🕒', label: { zh: '开放时间', en: 'Hours', es: 'Horario', pt: 'Horário' } as T, value: '09:00 — 16:00', desc: { zh: '每日开放，随季节微调，建议提前查阅。', en: 'Daily; seasonal shifts — check ahead.', es: 'Diario; ajustes estacionales — consulte antes.', pt: 'Diário; ajustes sazonais — confira antes.' } as T },
-    { icon: '🎟️', label: { zh: '门票与入口', en: 'Ticket & entry', es: 'Entrada', pt: 'Ingresso' } as T, value: 'Centro de Visitantes', desc: { zh: '购票后统一乘园区环保双层巴士到步道起点。', en: 'Buy tickets, then board the park\'s eco double-decker bus to the trailhead.', es: 'Compre entrada y tome el autobús ecológico hasta la trilha.', pt: 'Compre o ingresso e pegue o ônibus ecológico até a trilha.' } as T },
-    { icon: '⏱️', label: { zh: '游览时长', en: 'Duration', es: 'Duración', pt: 'Duração' } as T, value: '3 — 4 h', desc: { zh: '步行 1.5-2 小时 + 巴士与拍照，建议预留 3-4 小时。', en: '1.5–2 h walking + bus + photos. Block 3–4 h total.', es: '1,5–2 h caminando + bus + fotos. Reserve 3–4 h.', pt: '1,5–2 h caminhando + ônibus + fotos. Reserve 3–4 h.' } as T },
-    { icon: '⚠️', label: { zh: '重要贴士', en: 'Key tips', es: 'Consejos', pt: 'Dicas' } as T, value: '', desc: '', tips: [{ zh: '务必带雨衣 + 手机防水袋', en: 'Poncho + phone drybag are mandatory', es: 'Poncho y bolsa impermeable obligatorios', pt: 'Capa de chuva + saco à prova d\'água' } as T, { zh: '严禁喂食浣熊 (Quati)', en: 'Never feed the coatis (Quati)', es: 'No alimente a los coatíes', pt: 'Não alimente os quatis' } as T, { zh: '全程无障碍友好', en: 'Fully wheelchair accessible', es: 'Accesible en silla de ruedas', pt: 'Acessível em cadeira de rodas' } as T] },
+    { icon: '🕒', label: { zh: '开放时间', en: 'Hours', es: 'Horario', pt: 'Horário', ko: '개장 시간' } as T, value: '09:00 — 16:00', desc: { zh: '周一至周五 09:00–16:00；周六、周日 08:30–16:00（全年开放，建议提前核实）。', en: 'Mon–Fri 09:00–16:00; Sat–Sun 08:30–16:00 (open year-round — verify ahead).', es: 'Lun–vie 09:00–16:00; sáb–dom 08:30–16:00 (abierto todo el año).', pt: 'Seg–sex 09:00–16:00; sáb–dom 08:30–16:00 (aberto o ano todo — confira antes).', ko: '월~금 09:00–16:00, 토~일 08:30–16:00 (연중 개방 — 방문 전 확인 권장).' } as T },
+    { icon: '🎟️', label: { zh: '门票与入口', en: 'Ticket & entry', es: 'Entrada', pt: 'Ingresso', ko: '입장권 및 입구' } as T, value: 'Centro de Visitantes', desc: { zh: '购票后统一乘园区环保双层巴士到步道起点。', en: 'Buy tickets, then board the park\\'s eco double-decker bus to the trailhead.', es: 'Compre entrada y tome el autobús ecológico hasta la trilha.', pt: 'Compre o ingresso e pegue o ônibus ecológico até a trilha.', ko: '입장권을 구매한 뒤 공원의 친환경 2층 버스를 타고 산책로 시작점으로 이동합니다.' } as T },
+    { icon: '⏱️', label: { zh: '游览时长', en: 'Duration', es: 'Duración', pt: 'Duração', ko: '관람 시간' } as T, value: '3 — 4 h', desc: { zh: '步行 1.5-2 小时 + 巴士与拍照，建议预留 3-4 小时。', en: '1.5–2 h walking + bus + photos. Block 3–4 h total.', es: '1,5–2 h caminando + bus + fotos. Reserve 3–4 h.', pt: '1,5–2 h caminhando + ônibus + fotos. Reserve 3–4 h.', ko: '도보 1.5~2시간에 버스와 사진 촬영까지, 총 3~4시간을 잡으세요.' } as T },
+    { icon: '⚠️', label: { zh: '重要贴士', en: 'Key tips', es: 'Consejos', pt: 'Dicas', ko: '핵심 팁' } as T, value: '', desc: '', tips: [{ zh: '务必带雨衣 + 手机防水袋', en: 'Poncho + phone drybag are mandatory', es: 'Poncho y bolsa impermeable obligatorios', pt: 'Capa de chuva + saco à prova d\\'água', ko: '우비와 휴대폰 방수팩은 필수' } as T, { zh: '严禁喂食浣熊 (Quati)', en: 'Never feed the coatis (Quati)', es: 'No alimente a los coatíes', pt: 'Não alimente os quatis', ko: '아메리카너구리(Quati)에게 먹이를 주지 마세요' } as T, { zh: '全程无障碍友好', en: 'Fully wheelchair accessible', es: 'Accesible en silla de ruedas', pt: 'Acessível em cadeira de rodas', ko: '휠체어 이용 전면 가능' } as T] },
   ],
 };
 
 // ── Transport ──
 export const transport = {
-  sectionNum: { zh: '交通指南', en: 'Transport', es: 'Transporte', pt: 'Transporte' } as T,
-  heading: { zh: '三种方式<br/><em class="text-[color:var(--color-emerald)]">到达园区</em>', en: 'Three ways<br/><em class="text-[color:var(--color-emerald)]">to arrive</em>', es: 'Tres formas<br/><em class="text-[color:var(--color-emerald)]">de llegar</em>', pt: 'Três formas<br/><em class="text-[color:var(--color-emerald)]">de chegar</em>' } as T,
-  subtitle: { zh: '距离机场仅 3 公里，市中心约 30 分钟车程。', en: 'Just 3 km from the airport, ~30 minutes from downtown Foz.', es: 'A solo 3 km del aeropuerto, ~30 min del centro de Foz.', pt: 'A apenas 3 km do aeroporto, ~30 min do centro de Foz.' } as T,
+  sectionNum: { zh: '交通指南', en: 'Transport', es: 'Transporte', pt: 'Transporte', ko: '교통 안내' } as T,
+  heading: { zh: '三种方式<br/><em class="text-[color:var(--color-emerald)]">到达园区</em>', en: 'Three ways<br/><em class="text-[color:var(--color-emerald)]">to arrive</em>', es: 'Tres formas<br/><em class="text-[color:var(--color-emerald)]">de llegar</em>', pt: 'Três formas<br/><em class="text-[color:var(--color-emerald)]">de chegar</em>', ko: '세 가지 방법<br/><em class="text-[color:var(--color-emerald)]">도착하기</em>' } as T,
+  subtitle: { zh: '距离机场仅 3 公里，市中心约 30 分钟车程。', en: 'Just 3 km from the airport, ~30 minutes from downtown Foz.', es: 'A solo 3 km del aeropuerto, ~30 min del centro de Foz.', pt: 'A apenas 3 km do aeroporto, ~30 min do centro de Foz.', ko: '공항에서 3km, 시내에서 차로 약 30분 거리입니다.' } as T,
   items: [
-    { icon: '✈️', title: { zh: '从福斯-杜伊瓜苏机场 (IGU)', en: 'From Foz do Iguaçu Airport (IGU)', es: 'Desde el aeropuerto (IGU)', pt: 'Do Aeroporto (IGU)' } as T, meta: '3 km · 5-10 min', details: [{ icon: '🚌', text: { zh: '<strong>Linha 120 — Parque Nacional</strong> · 最经济，约 R$5，机场即可上车', en: '<strong>Linha 120 — Parque Nacional</strong> · Cheapest, ~R$5, boards right outside terminal', es: '<strong>Linha 120 — Parque Nacional</strong> · Más económico, ~R$5, sale del terminal', pt: '<strong>Linha 120 — Parque Nacional</strong> · Mais barato, ~R$5, saída do terminal' } as T }, { icon: '🚕', text: { zh: '出租车 / Uber · 5 分钟, 便于携带行李', en: 'Taxi / Uber · 5 min, easy with luggage', es: 'Taxi / Uber · 5 min, ideal con equipaje', pt: 'Táxi / Uber · 5 min, ideal com bagagem' } as T }] },
-    { icon: '🏙️', title: { zh: '从市中心 (Centro)', en: 'From Downtown (Centro)', es: 'Desde el Centro', pt: 'Do Centro' } as T, meta: '~20 km · 30-40 min', details: [{ icon: '🚌', text: { zh: '<strong>Linha 120</strong> · 贯穿市中心-机场-国家公园，约 40 分钟', en: '<strong>Linha 120</strong> · Loops through downtown → airport → park, ~40 min', es: '<strong>Linha 120</strong> · Recorre centro → aeropuerto → parque, ~40 min', pt: '<strong>Linha 120</strong> · Passa centro → aeroporto → parque, ~40 min' } as T }, { icon: '📱', text: { zh: 'Uber / 99 · R$30 — R$50, ~30 min', en: 'Uber / 99 · R$30 — R$50, ~30 min', es: 'Uber / 99 · R$30 — R$50, ~30 min', pt: 'Uber / 99 · R$30 — R$50, ~30 min' } as T }] },
-    { icon: '🚗', title: { zh: '自驾与停车', en: 'Self-drive & Parking', es: 'En coche y estacionamiento', pt: 'Carro próprio' } as T, meta: 'Centro de Visitantes', details: [{ icon: '', text: { zh: '游客中心外设大型付费停车场；停车后换乘园区免费环保巴士进入景区。', en: 'Large paid lot at the visitor center; transfer to the free eco-shuttle inside.', es: 'Gran estacionamiento pago junto al centro de visitantes; luego autobús ecológico gratuito.', pt: 'Estacionamento pago no centro de visitantes; depois ônibus ecológico gratuito.' } as T }] },
+    { icon: '✈️', title: { zh: '从福斯-杜伊瓜苏机场 (IGU)', en: 'From Foz do Iguaçu Airport (IGU)', es: 'Desde el aeropuerto (IGU)', pt: 'Do Aeroporto (IGU)', ko: '포스두이구아수 공항(IGU)에서' } as T, meta: '3 km · 5-10 min', details: [{ icon: '🚌', text: { zh: '<strong>Linha 120 — Parque Nacional</strong> · 最经济，约 R$5，机场即可上车', en: '<strong>Linha 120 — Parque Nacional</strong> · Cheapest, ~R$5, boards right outside terminal', es: '<strong>Linha 120 — Parque Nacional</strong> · Más económico, ~R$5, sale del terminal', pt: '<strong>Linha 120 — Parque Nacional</strong> · Mais barato, ~R$5, saída do terminal', ko: '<strong>Linha 120 — Parque Nacional</strong> · 가장 저렴, 약 R$5, 터미널 밖에서 바로 탑승' } as T }, { icon: '🚕', text: { zh: '出租车 / Uber · 5 分钟, 便于携带行李', en: 'Taxi / Uber · 5 min, easy with luggage', es: 'Taxi / Uber · 5 min, ideal con equipaje', pt: 'Táxi / Uber · 5 min, ideal com bagagem', ko: '택시 / Uber · 5분, 짐 운반에 편리' } as T }] },
+    { icon: '🏙️', title: { zh: '从市中心 (Centro)', en: 'From Downtown (Centro)', es: 'Desde el Centro', pt: 'Do Centro', ko: '시내(Centro)에서' } as T, meta: '~20 km · 30-40 min', details: [{ icon: '🚌', text: { zh: '<strong>Linha 120</strong> · 贯穿市中心-机场-国家公园，约 40 分钟', en: '<strong>Linha 120</strong> · Loops through downtown → airport → park, ~40 min', es: '<strong>Linha 120</strong> · Recorre centro → aeropuerto → parque, ~40 min', pt: '<strong>Linha 120</strong> · Passa centro → aeroporto → parque, ~40 min', ko: '<strong>Linha 120</strong> · 시내→공항→국립공원 경유, 약 40분' } as T }, { icon: '📱', text: { zh: 'Uber / 99 · R$30 — R$50, ~30 min', en: 'Uber / 99 · R$30 — R$50, ~30 min', es: 'Uber / 99 · R$30 — R$50, ~30 min', pt: 'Uber / 99 · R$30 — R$50, ~30 min', ko: 'Uber / 99 · R$30 — R$50, 약 30분' } as T }] },
+    { icon: '🚗', title: { zh: '自驾与停车', en: 'Self-drive & Parking', es: 'En coche y estacionamiento', pt: 'Carro próprio', ko: '자가운전 및 주차' } as T, meta: 'Centro de Visitantes', details: [{ icon: '', text: { zh: '游客中心外设大型付费停车场；停车后换乘园区免费环保巴士进入景区。', en: 'Large paid lot at the visitor center; transfer to the free eco-shuttle inside.', es: 'Gran estacionamiento pago junto al centro de visitantes; luego autobús ecológico gratuito.', pt: 'Estacionamento pago no centro de visitantes; depois ônibus ecológico gratuito.', ko: '방문자 센터 외부에 대형 유료 주차장이 있으며, 주차 후 공원 무료 친환경 셔틀을 이용해 입장합니다.' } as T }] },
   ],
 };
 
@@ -198,17 +207,17 @@ export const encyclopedia = {
 
 // ── Gallery ──
 export const gallery = {
-  sectionNum: { zh: '视觉图集', en: 'Gallery', es: 'Galería', pt: 'Galeria' } as T,
-  heading: { zh: '水、光、雾、彩虹', en: 'Water. Light. Mist. Rainbow.', es: 'Agua. Luz. Niebla. Arcoíris.', pt: 'Água. Luz. Névoa. Arco-íris.' } as T,
-  viewMorePhotos: { zh: '在 Google 地图上查看更多照片', en: 'View more photos on Google Maps', es: 'Ver más fotos en Google Maps', pt: 'Ver mais fotos no Google Maps' } as T,
+  sectionNum: { zh: '视觉图集', en: 'Gallery', es: 'Galería', pt: 'Galeria', ko: '갤러리' } as T,
+  heading: { zh: '水、光、雾、彩虹', en: 'Water. Light. Mist. Rainbow.', es: 'Agua. Luz. Niebla. Arcoíris.', pt: 'Água. Luz. Névoa. Arco-íris.', ko: '물 · 빛 · 안개 · 무지개' } as T,
+  viewMorePhotos: { zh: '在 Google 地图上查看更多照片', en: 'View more photos on Google Maps', es: 'Ver más fotos en Google Maps', pt: 'Ver mais fotos no Google Maps', ko: 'Google 지도에서 더 많은 사진 보기' } as T,
 };
 
 // ── Reviews ──
 export const reviews = {
-  sectionNum: { zh: '游客评价', en: 'Reviews', es: 'Reseñas', pt: 'Avaliações' } as T,
-  heading: { zh: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · 来自 19,587 位旅行者', en: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · from 19,587 travelers', es: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · de 19.587 viajeros', pt: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · de 19.587 viajantes' } as T,
-  viewMoreReviews: { zh: '在 Google 地图上查看更多评价', en: 'View more reviews on Google Maps', es: 'Ver más reseñas en Google Maps', pt: 'Ver mais avaliações no Google Maps' } as T,
-  mapsLink: { zh: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', en: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', es: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', pt: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7' } as T,
+  sectionNum: { zh: '游客评价', en: 'Reviews', es: 'Reseñas', pt: 'Avaliações', ko: '방문 후기' } as T,
+  heading: { zh: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · 来自 19,611 位旅行者', en: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · from 19,611 travelers', es: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · de 19.611 viajeros', pt: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · de 19.611 viajantes', ko: '4.9<span class="text-[color:var(--color-emerald)]">/5</span> · 여행자 19,611명' } as T,
+  viewMoreReviews: { zh: '在 Google 地图上查看更多评价', en: 'View more reviews on Google Maps', es: 'Ver más reseñas en Google Maps', pt: 'Ver mais avaliações no Google Maps', ko: 'Google 지도에서 더 많은 후기 보기' } as T,
+  mapsLink: { zh: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', en: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', es: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', pt: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7', ko: 'https://maps.app.goo.gl/jvfSBtLQsZZ4uiaE7' } as T,
   items: [
     { stars: '★★★★★', date: '2025-05', title: { zh: '"大自然的终极震撼"', en: '"Nature at its most humbling"', es: '"La naturaleza en su forma más humilde"', pt: '"A natureza em sua forma mais humilde"' } as T, desc: { zh: '相比阿根廷侧，巴西这边的步道能让你看清伊瓜苏的全貌。走到魔鬼之喉栈道的时候，那种水汽和轰鸣声让人终生难忘。记得带雨衣！', en: 'Compared to the Argentine side, the Brazilian trail shows you the whole picture. The Devil\'s Throat catwalk — the mist and roar — is unforgettable. Bring a poncho!', es: 'Comparado con Argentina, el lado brasileño te muestra todo. La pasarela de la Garganta del Diablo, con la niebla y el rugido, es inolvidable. ¡Lleva poncho!', pt: 'Comparado ao lado argentino, o lado brasileiro mostra o todo. A passarela da Garganta do Diabo, com névoa e estrondo, é inesquecível. Leve capa!' } as T, author: 'Maria S. · 🇧🇷' },
     { stars: '★★★★★', date: '2025-04', title: { zh: '"组织有序，设施完善"', en: '"Perfectly organized park"', es: '"Perfectamente organizado"', pt: '"Perfeitamente organizado"' } as T, desc: { zh: '公园巴士系统高效无比，步道维护得非常好——我 70 岁的父亲都能轻松走完。全景电梯的景致无法用言语形容。', en: 'The park\'s shuttle bus system is incredibly efficient, and the trail itself is beautifully maintained — even my 70-year-old father made it through easily. The panoramic elevator at the end offers a view that words simply can\'t do justice to.', es: 'El sistema de autobuses del parque es increíblemente eficiente, y el sendero está magníficamente mantenido — incluso mi padre de 70 años lo hizo fácilmente. El ascensor panorámico al final ofrece una vista que las palabras no pueden describir.', pt: 'O sistema de ônibus é incrivelmente eficiente, e a trilha é lindamente mantida — até meu pai de 70 anos a fez facilmente. O elevador panorâmico oferece uma vista que as palavras não descrevem.' } as T, author: 'James W. · 🇺🇸' },
@@ -224,12 +233,12 @@ export const reviews = {
 
 // ── Surrounding ──
 export const surrounding = {
-  sectionNum: { zh: '周边联动', en: 'Nearby', es: 'Alrededores', pt: 'Arredores' } as T,
-  heading: { zh: '还可以<em class="text-[color:var(--color-emerald)]">连着玩</em>', en: 'Extend the trip<em class="text-[color:var(--color-emerald)]"> further</em>', es: 'Extiende tu viaje<em class="text-[color:var(--color-emerald)]"> aún más</em>', pt: 'Estenda a viagem<em class="text-[color:var(--color-emerald)]"> ainda mais</em>' } as T,
+  sectionNum: { zh: '周边联动', en: 'Nearby', es: 'Alrededores', pt: 'Arredores', ko: '주변 명소' } as T,
+  heading: { zh: '还可以<em class="text-[color:var(--color-emerald)]">连着玩</em>', en: 'Extend the trip<em class="text-[color:var(--color-emerald)]"> further</em>', es: 'Extiende tu viaje<em class="text-[color:var(--color-emerald)]"> aún más</em>', pt: 'Estenda a viagem<em class="text-[color:var(--color-emerald)]"> ainda mais</em>', ko: '함께 둘러보기<em class="text-[color:var(--color-emerald)]"> 더 멀리</em>' } as T,
   items: [
-    { img: '/gallery/trilha-das-cataratas-brasil (17).jpg', title: '🦜 Parque das Aves', desc: { zh: '距国家公园入口仅 300 米。南美最大的鸟类保护区，1,300+ 只热带鸟类，可零距离接触巨嘴鸟与金刚鹦鹉。', en: '300 m from the park entrance. South America\'s largest bird sanctuary; 1,300+ tropical birds you can meet up-close.', es: 'A 300 m del parque. El santuario de aves más grande de Sudamérica; 1.300+ aves tropicales.', pt: 'A 300 m do parque. O maior santuário de aves da América do Sul; 1.300+ aves tropicais.' } as T },
-    { img: '/gallery/trilha-das-cataratas-brasil (21).jpg', title: '🚤 Macuco Safari', desc: { zh: '园内探险项目。敞篷吉普穿越雨林，快艇逆流冲入瀑布下方，体验瀑布威力最刺激的方式。', en: 'Inside the park. Open jeeps through the jungle, then speedboats charge upstream directly under the falls.', es: 'Dentro del parque. Jeeps abiertos por la selva, luego lanchas hasta debajo de las cascadas.', pt: 'Dentro do parque. Jipes abertos pela mata e lanchas até debaixo das quedas.' } as T },
-    { img: '/gallery/trilha-das-cataratas-brasil (19).jpg', title: '⚡ Itaipu Binacional', desc: { zh: '世界上发电量最大的水电站之一。宏伟混凝土大坝是现代工程奇迹，提供常规观光与深入机房专业路线。', en: 'One of the world\'s largest hydroelectric plants. A modern engineering wonder with both standard tours and deep technical routes.', es: 'Una de las mayores hidroeléctricas del mundo. Ofrece visitas turísticas y rutas técnicas profundas.', pt: 'Uma das maiores hidrelétricas do mundo. Visitas turísticas e rotas técnicas profundas.' } as T },
+    { img: '/gallery/trilha-das-cataratas-brasil (17).jpg', title: '🦜 Parque das Aves', desc: { zh: '距国家公园入口仅 300 米。南美最大的鸟类保护区，1,300+ 只热带鸟类，可零距离接触巨嘴鸟与金刚鹦鹉。', en: '300 m from the park entrance. South America\\'s largest bird sanctuary; 1,300+ tropical birds you can meet up-close.', es: 'A 300 m del parque. El santuario de aves más grande de Sudamérica; 1.300+ aves tropicales.', pt: 'A 300 m do parque. O maior santuário de aves da América do Sul; 1.300+ aves tropicais.', ko: '국립공원 입구에서 300m. 남아메리카 최대 조류 보호구역으로 1,300마리 이상의 열대 조류를 가까이서 만날 수 있습니다.' } as T },
+    { img: '/gallery/trilha-das-cataratas-brasil (21).jpg', title: '🚤 Macuco Safari', desc: { zh: '园内探险项目。敞篷吉普穿越雨林，快艇逆流冲入瀑布下方，体验瀑布威力最刺激的方式。', en: 'Inside the park. Open jeeps through the jungle, then speedboats charge upstream directly under the falls.', es: 'Dentro del parque. Jeeps abiertos por la selva, luego lanchas hasta debajo de las cascadas.', pt: 'Dentro do parque. Jipes abertos pela mata e lanchas até debaixo das quedas.', ko: '공원 내 탐험 프로그램. 오픈 지프로 정글을 지나 급류 보트가 폭포 아래로 거슬러 올라갑니다.' } as T },
+    { img: '/gallery/trilha-das-cataratas-brasil (19).jpg', title: '⚡ Itaipu Binacional', desc: { zh: '世界上发电量最大的水电站之一。宏伟混凝土大坝是现代工程奇迹，提供常规观光与深入机房专业路线。', en: 'One of the world\\'s largest hydroelectric plants. A modern engineering wonder with both standard tours and deep technical routes.', es: 'Una de las mayores hidroeléctricas del mundo. Ofrece visitas turísticas y rutas técnicas profundas.', pt: 'Uma das maiores hidrelétricas do mundo. Visitas turísticas e rotas técnicas profundas.', ko: '세계 최대 규모의 수력 발전소 중 하나. 웅장한 콘크리트 댐은 현대 공학의 경이로, 일반 투어와 심층 기술 코스 모두 제공합니다.' } as T },
   ],
 };
 
@@ -337,49 +346,53 @@ export const ecology = {
 
 // ── FAQ (官方访客指南与常见问题) ──
 export const faq = {
-  sectionNum: { zh: '官方访客指南', en: 'Official Visitor Guide', es: 'Guía Oficial del Visitante', pt: 'Guia Oficial do Visitante' } as T,
-  heading: { zh: '访客指南与<em class="text-[color:var(--color-emerald)]">常见问题</em>', en: 'Visitor Guide &<em class="text-[color:var(--color-emerald)]"> FAQ</em>', es: 'Guía del visitante &<em class="text-[color:var(--color-emerald)]"> preguntas frecuentes</em>', pt: 'Guia do visitante &<em class="text-[color:var(--color-emerald)]"> perguntas frequentes</em>' } as T,
+  sectionNum: { zh: '官方访客指南', en: 'Official Visitor Guide', es: 'Guía Oficial del Visitante', pt: 'Guia Oficial do Visitante', ko: '공식 방문 가이드' } as T,
+  heading: { zh: '访客指南与<em class="text-[color:var(--color-emerald)]">常见问题</em>', en: 'Visitor Guide &<em class="text-[color:var(--color-emerald)]"> FAQ</em>', es: 'Guía del visitante &<em class="text-[color:var(--color-emerald)]"> preguntas frecuentes</em>', pt: 'Guia do visitante &<em class="text-[color:var(--color-emerald)]"> perguntas frequentes</em>', ko: '방문 가이드 및<em class="text-[color:var(--color-emerald)]"> 자주 묻는 질문</em>' } as T,
   disclaimer: {
     zh: '以下信息由 cataratasbrasil 非盈利科普团队根据公开资料整理，仅供访客参考。出行前请通过伊瓜苏国家公园官方网站核实最新政策。',
     en: 'The following information has been compiled by the cataratasbrasil non-profit educational team from publicly available sources and is provided for visitor reference only. Please verify the latest policies on the official Iguaçu National Park website before your visit.',
     es: 'La siguiente información ha sido recopilada por el equipo educativo sin fines de lucro de cataratasbrasil a partir de fuentes públicas y se proporciona solo como referencia. Por favor, verifique las políticas más recientes en el sitio web oficial del Parque Nacional do Iguaçu antes de su visita.',
     pt: 'As informações a seguir foram compiladas pela equipe educacional sem fins lucrativos do cataratasbrasil a partir de fontes públicas e são fornecidas apenas para referência. Por favor, verifique as políticas mais recentes no site oficial do Parque Nacional do Iguaçu antes de sua visita.',
+    ko: '다음 정보는 cataratasbrasil 비영리 교육 팀이 공개 자료를 바탕으로 정리한 것으로, 방문 참고용입니다. 방문 전 이구아수 국립공원 공식 웹사이트에서 최신 정책을 반드시 확인하세요.',
   } as T,
   items: [
     {
       q: { zh: '园区无障碍设施与步道难度说明', en: 'Accessibility & Trail Difficulty', es: 'Accesibilidad y dificultad del sendero', pt: 'Acessibilidade e dificuldade da trilha' } as T,
       a: {
-        zh: 'Trilha das Cataratas 步道全长 1.2 公里，整体坡度平缓，铺设防滑石板与木栈道。为保障所有访客的平等体验，园区已实现高标准的无障碍化。行动不便或使用轮椅的访客，可选择搭乘环保巴士直达步道终点，通过观光电梯无缝连接主观景台，近距离感受"魔鬼之喉"。',
-        en: 'The Trilha das Cataratas trail spans 1.2 kilometres with a gentle overall grade, paved with non-slip stone slabs and wooden boardwalks. To ensure an equitable experience for all visitors, the park has implemented high-standard accessibility. Visitors with limited mobility or using wheelchairs may take the eco-bus directly to the trail endpoint and connect seamlessly via the panoramic elevator to the main viewpoint, experiencing the Devil\'s Throat up close.',
-        es: 'El sendero Trilha das Cataratas tiene 1,2 km de longitud con una pendiente general suave, pavimentado con losas de piedra antideslizante y pasarelas de madera. Para garantizar una experiencia equitativa para todos los visitantes, el parque ha implementado accesibilidad de alto nivel. Los visitantes con movilidad reducida o en silla de ruedas pueden tomar el autobús ecológico directamente hasta el final del sendero y conectarse sin problemas a través del ascensor panorámico hasta el mirador principal.',
-        pt: 'A trilha das Cataratas tem 1,2 km de extensão com inclinação geral suave, pavimentada com lajes de pedra antiderrapante e passarelas de madeira. Para garantir uma experiência equitativa a todos os visitantes, o parque implementou acessibilidade de alto padrão. Visitantes com mobilidade reduzida ou em cadeira de rodas podem pegar o ônibus ecológico diretamente até o final da trilha e conectar-se perfeitamente pelo elevador panorâmico até o mirante principal.',
+        zh: 'Trilha das Cataratas 步道全长约 1.5 公里，整体坡度平缓，铺设防滑石板与木栈道。为保障所有访客的平等体验，园区已实现高标准的无障碍化。行动不便或使用轮椅的访客，可选择搭乘环保巴士直达步道终点，通过观光电梯无缝连接主观景台，近距离感受"魔鬼之喉"。',
+        en: 'The Trilha das Cataratas trail spans about 1.5 kilometres with a gentle overall grade, paved with non-slip stone slabs and wooden boardwalks. To ensure an equitable experience for all visitors, the park has implemented high-standard accessibility. Visitors with limited mobility or using wheelchairs may take the eco-bus directly to the trail endpoint and connect seamlessly via the panoramic elevator to the main viewpoint, experiencing the Devil\'s Throat up close.',
+        es: 'El sendero Trilha das Cataratas tiene 1,5 km de longitud con una pendiente general suave, pavimentado con losas de piedra antideslizante y pasarelas de madera. Para garantizar una experiencia equitativa para todos los visitantes, el parque ha implementado accesibilidad de alto nivel. Los visitantes con movilidad reducida o en silla de ruedas pueden tomar el autobús ecológico directamente hasta el final del sendero y conectarse sin problemas a través del ascensor panorámico hasta el mirador principal.',
+        pt: 'A trilha das Cataratas tem 1,5 km de extensão com inclinação geral suave, pavimentada com lajes de pedra antiderrapante e passarelas de madeira. Para garantir uma experiência equitativa a todos os visitantes, o parque implementou acessibilidade de alto padrão. Visitantes com mobilidade reduzida ou em cadeira de rodas podem pegar o ônibus ecológico diretamente até o final da trilha e conectar-se perfeitamente pelo elevador panorâmico até o mirante principal.',
       } as T,
     },
     {
-      q: { zh: '地貌视角差异：巴西侧与阿根廷侧有何不同？', en: 'Geomorphological Perspective: Brazil Side vs Argentina Side', es: 'Perspectiva geomorfológica: lado brasileño vs lado argentino', pt: 'Perspectiva geomorfológica: lado brasileiro vs lado argentino' } as T,
+      q: { zh: '地貌视角差异：巴西侧与阿根廷侧有何不同？', en: 'Geomorphological Perspective: Brazil Side vs Argentina Side', es: 'Perspectiva geomorfológica: lado brasileño vs lado argentino', pt: 'Perspectiva geomorfológica: lado brasileiro vs lado argentino', ko: '지형 관점 차이: 브라질 측과 아르헨티나 측' } as T,
       a: {
         zh: '两国境内的观测视角受断层地貌影响而截然不同。巴西侧拥有峡谷的完整"全景视角"，更适合宏观感受瀑布群的广度及地质构造；阿根廷侧步道则深入瀑布内部，提供沉浸式的微观体验。我们强烈建议自然观察者预留两天时间，从多维度完整认识这一世界自然遗产。',
         en: 'The observation perspectives in the two countries differ fundamentally due to fault geomorphology. The Brazilian side offers a complete "panoramic view" of the canyon, better suited for grasping the breadth of the falls system and its geological structure at a macro scale. The Argentine trails penetrate deep into the falls, providing an immersive micro-experience. We strongly recommend that nature observers reserve two days to fully appreciate this World Heritage site from multiple dimensions.',
-        es: 'Las perspectivas de observación en ambos países difieren fundamentalmente debido a la geomorfología de falla. El lado brasileño ofrece una "vista panorámica" completa del cañón, más adecuada para comprender la amplitud del sistema de cataratas y su estructura geológica a escala macro. Los senderos argentinos penetran profundamente en las cataratas, proporcionando una microexperiencia inmersiva. Recomendamos encarecidamente a los observadores de la naturaleza reservar dos días para apreciar plenamente este Patrimonio Mundial.',
+        es: 'Las perspectivas de observación en ambos países difieren fundamentalmente debido a la geomorfología de falla. El lado brasileño ofrece una "vista panorámica" completa del cañón, más adecuada para comprender la amplitud del sistema de cataratas y su estructura geológica a escala macro. Los senderos argentinos penetran profundamente en las cataratas, proporcionando una microexperiência inmersiva. Recomendamos encarecidamente a los observadores de la naturaleza reservar dos días para apreciar plenamente este Patrimonio Mundial.',
         pt: 'As perspectivas de observação nos dois países diferem fundamentalmente devido à geomorfologia de falha. O lado brasileiro oferece uma "visão panorâmica" completa do cânion, mais adequada para compreender a amplitude do sistema de cataratas e sua estrutura geológica em escala macro. As trilhas argentinas penetram profundamente nas cataratas, proporcionando uma microexperiência imersiva. Recomendamos fortemente que observadores da natureza reservem dois dias para apreciar plenamente este Patrimônio Mundial.',
+        ko: '두 나라의 관측 시점은 단층 지형의 영향으로 완전히 다릅니다. 브라질 측은 협곡의 완전한 "파노라마 전망"을 제공해 폭포 시스템 전체와 지질 구조를 거시적으로 느끼기에 적합합니다. 아르헨티나 측 산책로는 폭포 내부 깊숙이 들어가 몰입형 미시 경험을 제공합니다. 자연 관찰자라면 이 세계 자연유산을 다각도로 온전히 이해하기 위해 이틀을 잡을 것을 강력히 권장합니다.',
       } as T,
     },
     {
-      q: { zh: '水文与光影观测指南：何时是最佳到访时间？', en: 'Hydrology & Light Observation Guide: When Is the Best Time to Visit?', es: 'Guía de hidrología y luz: ¿cuál es el mejor momento para visitar?', pt: 'Guia de hidrologia e luz: qual é o melhor horário para visitar?' } as T,
+      q: { zh: '水文与光影观测指南：何时是最佳到访时间？', en: 'Hydrology & Light Observation Guide: When Is the Best Time to Visit?', es: 'Guía de hidrología y luz: ¿cuál es el mejor momento para visitar?', pt: 'Guia de hidrologia e luz: qual é o melhor horário para visitar?', ko: '수문학과 빛 관측 가이드: 언제 방문하는 것이 가장 좋나요?' } as T,
       a: {
         zh: '<strong>光影观测：</strong>下午 14:00–16:00 期间，太阳光线从巴西侧照射瀑布，折射水雾产生彩虹的概率最高。<br/><br/><strong>避开人流：</strong>为获得最佳的自然观察体验，建议在早晨 09:00 开园时即刻入园，此时野生动物活动最为频繁，且能享受静谧的峡谷轰鸣。',
-        en: '<strong>Light observation:</strong> Between 14:00 and 16:00, sunlight illuminates the falls from the Brazilian side, producing the highest probability of rainbows refracted through the mist.<br/><br/><strong>Avoiding crowds:</strong> For the optimal nature observation experience, we recommend entering at 09:00 when the park opens — wildlife is most active at this hour, and you can savour the canyon\'s roar in tranquillity.',
+        en: '<strong>Light observation:</strong> Between 14:00 and 16:00, sunlight illuminates the falls from the Brazilian side, producing the highest probability of rainbows refracted through the mist.<br/><br/><strong>Avoiding crowds:</strong> For the optimal nature observation experience, we recommend entering at 09:00 when the park opens — wildlife is most active at this hour, and you can savour the canyon\\'s roar in tranquillity.',
         es: '<strong>Observación de luz:</strong> Entre las 14:00 y las 16:00, la luz solar ilumina las cataratas desde el lado brasileño, produciendo la mayor probabilidad de arcoíris refractados a través de la niebla.<br/><br/><strong>Evitar multitudes:</strong> Para una experiencia óptima de observación de la naturaleza, recomendamos entrar a las 09:00 cuando abre el parque — la fauna es más activa a esta hora y se puede saborear el rugido del cañón en tranquilidad.',
         pt: '<strong>Observação de luz:</strong> Entre 14:00 e 16:00, a luz solar ilumina as cataratas do lado brasileiro, produzindo a maior probabilidade de arco-íris refratados através da névoa.<br/><br/><strong>Evitar multidões:</strong> Para a experiência ideal de observação da natureza, recomendamos entrar às 09:00 quando o parque abre — a fauna é mais ativa neste horário e você pode saborear o rugido do cânion em tranquilidade.',
+        ko: '<strong>빛 관측:</strong> 14:00~16:00 사이 브라질 측에서 태양빛이 폭포를 비추면 물안개에 굴절되어 무지개가 뜰 확률이 가장 높습니다.<br/><br/><strong>인파 피하기:</strong> 최적의 자연 관찰 경험을 위해 오전 09:00 개장과 동시에 입장할 것을 권장합니다. 이 시간 야생동물이 가장 활발하며 고요한 협곡의 포효를 만끽할 수 있습니다.',
       } as T,
     },
     {
-      q: { zh: '跨境观测：前往阿根廷侧的签证政策及注意事项', en: 'Cross-Border Observation: Visa Policy for the Argentine Side', es: 'Observación transfronteriza: política de visas para el lado argentino', pt: 'Observação transfronteiriça: política de vistos para o lado argentino' } as T,
+      q: { zh: '跨境观测：前往阿根廷侧的签证政策及注意事项', en: 'Cross-Border Observation: Visa Policy for the Argentine Side', es: 'Observación transfronteriza: política de visas para el lado argentino', pt: 'Observação transfronteiriça: política de vistos para o lado argentino', ko: '국경 너머 관측: 아르헨티나 측 비자 정책 및 주의사항' } as T,
       a: {
         zh: '如需跨越国境前往阿根廷伊瓜苏国家公园，政策视您的护照签发国而定。若持有有效美国、加拿大或申根签证，通常可通过申请阿根廷 AVE 电子旅行授权免签入境。<br/><br/><strong>注：</strong>移民政策可能存在变动，跨境前请务必前往阿根廷国家移民局官网核实最新要求，并在 Tancredo Neves 友谊桥备齐实体文件。',
-        en: 'If you wish to cross the border to visit Argentina\'s Iguazú National Park, the policy depends on your passport\'s country of issuance. Visitors holding a valid US, Canadian, or Schengen visa may generally enter visa-free by applying for Argentina\'s AVE electronic travel authorisation.<br/><br/><strong>Note:</strong> Immigration policies are subject to change. Before crossing, please verify the latest requirements on the official website of Argentina\'s National Immigration Directorate, and have physical documents ready at the Tancredo Neves Friendship Bridge.',
+        en: 'If you wish to cross the border to visit Argentina\\'s Iguazú National Park, the policy depends on your passport\\'s country of issuance. Visitors holding a valid US, Canadian, or Schengen visa may generally enter visa-free by applying for Argentina\\'s AVE electronic travel authorisation.<br/><br/><strong>Note:</strong> Immigration policies are subject to change. Before crossing, please verify the latest requirements on the official website of Argentina\\'s National Immigration Directorate, and have physical documents ready at the Tancredo Neves Friendship Bridge.',
         es: 'Si desea cruzar la frontera para visitar el Parque Nacional Iguazú de Argentina, la política depende del país de emisión de su pasaporte. Los visitantes con visa válida de EE.UU., Canadá o Schengen generalmente pueden ingresar sin visa solicitando la autorización electrónica de viaje AVE de Argentina.<br/><br/><strong>Nota:</strong> Las políticas migratorias están sujetas a cambios. Antes de cruzar, verifique los requisitos más recientes en el sitio web oficial de la Dirección Nacional de Migraciones de Argentina, y tenga los documentos físicos listos en el Puente de la Amistad Tancredo Neves.',
         pt: 'Se desejar cruzar a fronteira para visitar o Parque Nacional Iguazú da Argentina, a política depende do país de emissão do seu passaporte. Visitantes com visto válido dos EUA, Canadá ou Schengen geralmente podem entrar sem visto solicitando a autorização eletrônica de viagem AVE da Argentina.<br/><br/><strong>Nota:</strong> As políticas de imigração estão sujeitas a alterações. Antes de cruzar, verifique os requisitos mais recentes no site oficial da Direção Nacional de Migrações da Argentina, e tenha os documentos físicos prontos na Ponte da Amizade Tancredo Neves.',
+        ko: '아르헨티나 이구아수 국립공원으로 국경을 넘어가려면 정책은 여권 발급국에 따라 다릅니다. 유효한 미국·캐나다·송겐 비자가 있으면 보통 아르헨티나 AVE 전자여행허가를 신청해 무비자로 입국할 수 있습니다.<br/><br/><strong>참고:</strong> 이민 정책은 변동될 수 있으니 국경을 넘기 전 아르헨티나 국가이민청 공식 웹사이트에서 최신 요건을 확인하고, Tancredo Neves 우정의 다리에서 서류 원본을 준비하세요.',
       } as T,
     },
   ],
@@ -504,14 +517,14 @@ export const partners = {
 
 // ── Footer (updated) ──
 export const footer = {
-  cta: { zh: '今天，走进<br/><em class="text-[color:var(--color-sun)]">水雾深处</em>。', en: 'Today, step<br/><em class="text-[color:var(--color-sun)]">into the mist</em>.', es: 'Hoy, entra<br/><em class="text-[color:var(--color-sun)]">en la niebla</em>.', pt: 'Hoje, entre<br/><em class="text-[color:var(--color-sun)]">na névoa</em>.' } as T,
-  address: { zh: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil', en: 'Trilha das Cataratas · Iguaçu National Park · Foz do Iguaçu, PR, Brazil', es: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil', pt: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil' } as T,
-  copyright: { zh: '© 2026 cataratasbrasil 保留所有权利。', en: '© 2026 cataratasbrasil. All rights reserved.', es: '© 2026 cataratasbrasil. Todos los derechos reservados.', pt: '© 2026 cataratasbrasil. Todos os direitos reservados.' } as T,
-  disclaimer: { zh: '本网站是一个独立的第三方旅游资讯项目。我们与当地政府或其他官方机构没有任何关联。', en: 'This website is an independent third-party tourism information project. We are not affiliated with any local government or official entity.', es: 'Este sitio web es un proyecto independiente de información turística de terceros. No estamos afiliados a ningún gobierno local ni entidad oficial.', pt: 'Este site é um projeto independente de informações turísticas de terceiros. Não temos vínculo com nenhum governo local ou entidade oficial.' } as T,
-  privacy: { zh: '隐私政策', en: 'Privacy Policy', es: 'Política de Privacidad', pt: 'Política de Privacidade' } as T,
-  terms: { zh: '服务条款', en: 'Terms of Service', es: 'Términos de Servicio', pt: 'Termos de Serviço' } as T,
-  cookies: { zh: 'Cookie 设置', en: 'Cookie Settings', es: 'Configuración de Cookies', pt: 'Configurações de Cookies' } as T,
-  leaveNoTrace: { zh: '游览公约', en: 'Visitor Code', es: 'Código del Visitante', pt: 'Código do Visitante' } as T,
+  cta: { zh: '今天，走进<br/><em class="text-[color:var(--color-sun)]">水雾深处</em>。', en: 'Today, step<br/><em class="text-[color:var(--color-sun)]">into the mist</em>.', es: 'Hoy, entra<br/><em class="text-[color:var(--color-sun)]">en la niebla</em>.', pt: 'Hoje, entre<br/><em class="text-[color:var(--color-sun)]">na névoa</em>.', ko: '오늘, <br/><em class="text-[color:var(--color-sun)]">물안개 속으로</em> 걸어가세요.' } as T,
+  address: { zh: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil', en: 'Trilha das Cataratas · Iguaçu National Park · Foz do Iguaçu, PR, Brazil', es: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil', pt: 'Trilha das Cataratas · Parque Nacional do Iguaçu · Foz do Iguaçu, PR, Brasil', ko: 'Trilha das Cataratas · 이구아수 국립공원 · Foz do Iguaçu, PR, 브라질' } as T,
+  copyright: { zh: '© 2026 cataratasbrasil 保留所有权利。', en: '© 2026 cataratasbrasil. All rights reserved.', es: '© 2026 cataratasbrasil. Todos los derechos reservados.', pt: '© 2026 cataratasbrasil. Todos os direitos reservados.', ko: '© 2026 cataratasbrasil. 모든 권리 보유.' } as T,
+  disclaimer: { zh: '本网站是一个独立的第三方旅游资讯项目。我们与当地政府或其他官方机构没有任何关联。', en: 'This website is an independent third-party tourism information project. We are not affiliated with any local government or official entity.', es: 'Este sitio web es un proyecto independiente de información turística de terceros. No estamos afiliados a ningún gobierno local ni entidad oficial.', pt: 'Este site é um projeto independente de informações turísticas de terceiros. Não temos vínculo com nenhum governo local ou entidade oficial.', ko: '이 웹사이트는 독립적인 제3자 여행 정보 프로젝트입니다. 우리는 지방 정부나 공식 기관과 어떠한 관련도 없습니다.' } as T,
+  privacy: { zh: '隐私政策', en: 'Privacy Policy', es: 'Política de Privacidad', pt: 'Política de Privacidade', ko: '개인정보 처리방침' } as T,
+  terms: { zh: '服务条款', en: 'Terms of Service', es: 'Términos de Servicio', pt: 'Termos de Serviço', ko: '서비스 약관' } as T,
+  cookies: { zh: 'Cookie 设置', en: 'Cookie Settings', es: 'Configuración de Cookies', pt: 'Configurações de Cookies', ko: '쿠키 설정' } as T,
+  leaveNoTrace: { zh: '游览公约', en: 'Visitor Code', es: 'Código del Visitante', pt: 'Código do Visitante', ko: '방문자 약속' } as T,
 };
 
 // ── Privacy Policy Page ──
@@ -639,6 +652,18 @@ export const cookies = {
 
 // ── Meta ──
 export const meta = {
-  title: { zh: 'Mirante da Garganta do Diabo (Foz do Iguaçu) - 游览指南与位置', en: 'Mirante da Garganta do Diabo (Foz do Iguaçu) - Visitor Guide & Location', es: 'Mirante da Garganta del Diablo (Foz do Iguaçu) - Guía del Visitante y Ubicación', pt: 'Mirante da Garganta do Diabo (Foz do Iguaçu) - Guia do Visitante e Localização' } as T,
-  description: { zh: '探索位于巴西巴拉那州福斯-杜伊瓜苏的标志性地标 Mirante da Garganta do Diabo。查看位置地图、开放详情、周边 Parque das Aves 和 Itaipu Binacional 以及旅行提示。', en: 'Discover Mirante da Garganta do Diabo, the iconic landmark in Foz do Iguaçu, Paraná, Brazil. View location map, opening details, nearby Parque das Aves and Itaipu Binacional, and travel tips.', es: 'Descubra el Mirante da Garganta del Diablo, el icónico punto de referencia en Foz do Iguaçu, Paraná, Brasil. Vea el mapa de ubicación, detalles de apertura, el cercano Parque das Aves e Itaipu Binacional y consejos de viaje.', pt: 'Descubra o Mirante da Garganta do Diabo, o marco icônico em Foz do Iguaçu, Paraná, Brasil. Veja o mapa de localização, detalhes de abertura, o Parque das Aves e a Itaipu Binacional nas proximidades, e dicas de viagem.' } as T,
+  title: {
+    zh: '魔鬼之喉观景台 | 伊瓜苏瀑布（巴西）',
+    en: 'Devil\'s Throat Viewpoint | Iguaçu Falls',
+    es: 'Mirador Garganta del Diablo | Cataratas del Iguazú',
+    pt: 'Mirante da Garganta do Diabo | Cataratas do Iguaçu',
+    ko: '악마의 목구멍 전망대 | 이구아수 폭포 브라질',
+  } as T,
+  description: {
+    zh: '巴西伊瓜苏国家公园核心观景台——魔鬼之喉（Garganta do Diabo）。查看开放时间、门票、Trilha das Cataratas 步道、如何到达福斯-杜伊瓜苏，以及无障碍与游玩建议。',
+    en: 'The core viewpoint of Iguaçu Falls in Foz do Iguaçu, Brazil — the Devil\'s Throat. See opening hours, tickets, the Trilha das Cataratas trail, how to get there, accessibility and visit tips.',
+    es: 'El mirador central de las Cataratas del Iguazú en Foz do Iguaçu, Brasil — la Garganta del Diablo. Horarios, entradas, la Trilha das Cataratas, cómo llegar, accesibilidad y consejos.',
+    pt: 'Visite o Mirante da Garganta do Diabo nas Cataratas do Iguaçu. Veja como chegar, Trilha das Cataratas, horários, ingressos, acessibilidade e dicas para sua visita.',
+    ko: '브라질 이구아수 국립공원의 핵심 전망대, 악마의 목구멍(Mirante da Garganta do Diabo). 개장 시간, 입장권, 트릴랴 다스 카타라타스(Trilha das Cataratas) 산책로, 오시는 길, 무장애 편의시설과 방문 팁을 확인하세요.',
+  } as T,
 };

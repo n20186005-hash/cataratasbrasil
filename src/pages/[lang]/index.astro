@@ -44,6 +44,16 @@ const desc = _(meta.description);
   <Surrounding lang={lang} />
   <LeaveNoTrace lang={lang} />
   <Faq lang={lang} />
+  {lang === 'pt' && (
+    <section class="bg-[color:var(--color-cream)] py-16">
+      <div class="container text-center">
+        <p class="section-num">Aprofunde-se</p>
+        <h2 class="section-title">Conheça a Trilha das Cataratas</h2>
+        <p class="section-lead">A passarela de 1,5 km até o Mirante da Garganta do Diabo — horários, ingressos e dicas de acessibilidade.</p>
+        <a class="inline-block mt-4 bg-[color:var(--color-sun)] text-[color:var(--color-ink)] font-mulish font-bold px-6 py-3 rounded-full" href="/pt/trilha-das-cataratas/">Trilha das Cataratas →</a>
+      </div>
+    </section>
+  )}
   <Footer lang={lang} />
   <StructuredData lang={lang} />
 </BaseLayout>
