@@ -1,21 +1,23 @@
 ---
-import places from '../data/explore.json';
-const groups = [
-  { id: 'natureza', name: 'Natureza e passeios ao ar livre' },
-  { id: 'cultura', name: 'Cultura e patrimônio' },
-  { id: 'lazer', name: 'Parques e atrações' },
-];
+import { explorePlaces, localizedExplorePlace } from '../i18n/explore';
+import { exploreText } from '../i18n/explore-ui';
+import type { Lang } from '../i18n/utils';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const places = explorePlaces.map((place) => localizedExplorePlace(place, lang));
+const groups = ['natureza', 'cultura', 'lazer'] as const;
 ---
 <section id="explore" class="bg-[color:var(--color-cream)] py-16 scroll-mt-16">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="font-display text-4xl md:text-5xl">Conheça Foz do Iguaçu e arredores</h2>
+    <h2 class="font-display text-4xl md:text-5xl">{exploreText('directory', lang)}</h2>
     <div class="mt-8 grid gap-5 md:grid-cols-3">
-      {groups.map(({ id, name }) => (
+      {groups.map((id) => (
         <section class="rounded-3xl bg-white border border-black/5 p-6">
-          <h3 class="font-display text-2xl">{name}</h3>
+          <h3 class="font-display text-2xl">{exploreText(id, lang)}</h3>
           <ul class="mt-4 space-y-2">
             {places.filter((place) => place.category === id).map((place) => (
-              <li><a class="link-underline inline-block py-1" href={`/pt/explore/${place.slug}/`}>{place.name} →</a></li>
+              <li><a class="link-underline inline-block py-1" href={`/${lang}/explore/${place.slug}/`}>{place.name} →</a></li>
             ))}
           </ul>
         </section>
