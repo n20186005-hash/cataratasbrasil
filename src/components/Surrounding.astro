@@ -1,31 +1,18 @@
 ---
+import { placeName } from '../i18n/ui';
 import type { Lang } from '../i18n/utils';
-import { surrounding } from '../i18n/translations';
+import { nearbyCopy, nearbySlugs } from '../i18n/nearby';
+import { t, surrounding } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
-const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
+const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
 
 const altMap: Record<Lang, string[]> = {
-  zh: [
-    'Parque das Aves — Mirante da Garganta do Diabo 周边 300 米的鸟类公园',
-    'Macuco Safari — Cataratas Brasil 园区内雨林探险和快艇冲瀑',
-    'Itaipu Binacional — 伊泰普水电站，福斯-杜伊瓜苏周边核心地标',
-  ],
-  en: [
-    'Parque das Aves — bird sanctuary 300 m near Mirante da Garganta do Diabo, Cataratas Brasil',
-    'Macuco Safari — jungle jeep and speedboat adventure inside Cataratas Brasil park',
-    'Itaipu Binacional — hydroelectric dam landmark near Cataratas Brasil, Foz do Iguaçu',
-  ],
-  es: [
-    'Parque das Aves — santuario de aves a 300 m cerca del Mirante da Garganta del Diablo',
-    'Macuco Safari — aventura en jeep y lancha dentro del parque Cataratas Brasil',
-    'Itaipu Binacional — represa hidroeléctrica cerca de Cataratas Brasil, Foz do Iguaçu',
-  ],
-  pt: [
-    'Parque das Aves — santuário de aves a 300 m próximo ao Mirante da Garganta do Diabo',
-    'Macuco Safari — aventura de jipe e lancha no parque da Cataratas Brasil',
-    'Itaipu Binacional — usina hidrelétrica próxima à Cataratas Brasil, Foz do Iguaçu',
-  ],
+  zh: ['伊瓜苏瀑布全景', '峡谷上方的瀑布水雾', '伊瓜苏瀑布下方的游船'],
+  en: ['Panorama of Iguazu Falls', 'Spray rising above the falls gorge', 'Boat below Iguazu Falls'],
+  es: ['Panorámica de las cataratas del Iguazú', 'Rocío sobre la garganta de las cataratas', 'Barco bajo las cataratas del Iguazú'],
+  pt: ['Panorama das Cataratas do Iguaçu', 'Névoa sobre o cânion das cataratas', 'Barco abaixo das Cataratas do Iguaçu'],
+  ko: ['이과수 폭포 전경', '폭포 협곡 위로 피어오르는 물안개', '이과수 폭포 아래의 보트'],
 };
 
 const introMap: Record<Lang, string> = {
@@ -33,14 +20,15 @@ const introMap: Record<Lang, string> = {
   en: 'When visiting Mirante da Garganta do Diabo, visitors can easily explore surrounding historical landmarks and points of interest, including Parque das Aves and Itaipu Binacional.',
   es: 'Al visitar el Mirante da Garganta del Diablo, los visitantes pueden explorar fácilmente los puntos de interés cercanos, incluidos Parque das Aves e Itaipu Binacional.',
   pt: 'Ao visitar o Mirante da Garganta do Diabo, os visitantes podem explorar facilmente os pontos de interesse ao redor, incluindo o Parque das Aves e a Itaipu Binacional.',
+  ko: '이과수 폭포와 함께 새 공원과 이타이푸 수력 발전소를 둘러볼 수 있습니다.',
 };
 ---
-<section class="bg-[color:var(--color-mist)] py-24 md:py-32">
+<section id="nearby" class="bg-[color:var(--color-mist)] py-24 md:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)]">08 — {_(surrounding.sectionNum)}</div>
     <h2 class="font-display text-4xl md:text-6xl mt-4 max-w-3xl" set:html={_(surrounding.heading)} />
     <p class="mt-6 max-w-4xl text-[color:var(--color-moss)]/80 text-sm md:text-base italic">
-      Landmarks & Attractions Around Cataratas Brasil · {introMap[lang]}
+      {introMap[lang]}
     </p>
     <div class="grid md:grid-cols-3 gap-5 mt-14">
       {surrounding.items.map((card, i) => (
@@ -56,8 +44,17 @@ const introMap: Record<Lang, string> = {
               height="600"
             />
           </div>
-          <div class="p-6"><h3 class="font-display text-2xl">{card.title}</h3>
+          <div class="p-6"><h3 class="font-display text-2xl">{nearbySlugs[i] ? <a class="link-underline" href={`/${lang}/${nearbySlugs[i]}/`}>{card.title.split(" ")[0]} {placeName(nearbySlugs[i], lang)} →</a> : card.title}</h3>
           <p class="mt-2 text-[color:var(--color-moss)] text-sm leading-relaxed">{_(card.desc)}</p></div>
+        </article>
+      ))}
+      {nearbySlugs.slice(surrounding.items.length).map((slug) => (
+        <article class="rounded-3xl bg-white overflow-hidden card-hover">
+          <img class="aspect-[4/3] w-full object-cover" src={`/nearby/${slug}.webp`} alt={placeName(slug, lang)} loading="lazy" />
+          <div class="p-6">
+            <h3 class="font-display text-2xl"><a class="link-underline" href={`/${lang}/${slug}/`}>{placeName(slug, lang)} →</a></h3>
+            <p class="mt-2 text-[color:var(--color-moss)] text-sm leading-relaxed">{nearbyCopy[slug][lang][0]}</p>
+          </div>
         </article>
       ))}
     </div>

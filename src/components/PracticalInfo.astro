@@ -1,10 +1,9 @@
 ---
 import type { Lang } from '../i18n/utils';
-import { practical } from '../i18n/translations';
+import { t, practical } from '../i18n/translations';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
-const _ = (s: any) => typeof s === 'string' ? s : (s[lang] || s.pt || '');
-const isTips = (c: any) => c.tips;
+const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
 ---
 <section id="practical" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
   <div class="text-xs uppercase tracking-[0.25em] text-[color:var(--color-emerald)]">03 — {_(practical.sectionNum)}</div>
@@ -14,8 +13,8 @@ const isTips = (c: any) => c.tips;
       <div class={`rounded-3xl bg-white border border-black/5 p-6 ${i === 3 ? 'bg-[color:var(--color-sun)]/20 border-[color:var(--color-sun)]/40' : ''}`}>
         <div class="text-3xl">{card.icon}</div>
         <div class="text-xs uppercase tracking-widest text-[color:var(--color-emerald)] mt-4">{_(card.label)}</div>
-        {card.value && <div class="font-display text-2xl mt-1">{card.value}</div>}
-        {isTips(card) ? <ul class="mt-2 space-y-1.5 text-sm text-[color:var(--color-ink)]">{card.tips.map((tip: any, j: number) => <li>💧 {_(tip)}</li>)}</ul> : <p class="text-sm text-[color:var(--color-moss)]/80 mt-2">{_(card.desc)}</p>}
+        {card.value && <div class="font-display text-2xl mt-1">{_(card.value)}</div>}
+        {card.tips ? <ul class="mt-2 space-y-1.5 text-sm text-[color:var(--color-ink)]">{card.tips.map((tip) => <li>💧 {_(tip)}</li>)}</ul> : <p class="text-sm text-[color:var(--color-moss)]/80 mt-2">{_(card.desc)}</p>}
       </div>
     ))}
   </div>

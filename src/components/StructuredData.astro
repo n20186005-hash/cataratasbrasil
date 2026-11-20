@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../i18n/utils';
+import { visitGuides } from '../i18n/visit-guides';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 
@@ -26,7 +27,7 @@ const tourist = JSON.stringify({
   description: descMap[lang],
   url: `${siteUrl}/${lang}/`,
   image: [heroImage],
-  isAccessibleForFree: true,
+  isAccessibleForFree: false,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Trilha das Cataratas - Parque Nacional do Iguaçu',
@@ -120,7 +121,7 @@ const faqDataMap: Record<Lang, any> = {
         name: 'Is the trail physically demanding?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Not at all. About 1.5 km on paved, gently graded paths — friendly to all ages and fully wheelchair accessible.',
+          text: visitGuides.en.alternative,
         },
       },
       {
@@ -166,7 +167,7 @@ const faqDataMap: Record<Lang, any> = {
         name: 'A trilha é de esforço físico intenso?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'De forma alguma. São cerca de 1,5 km em caminhos pavimentados com leve declive — acessível a todas as idades e totalmente adaptado para cadeirantes.',
+          text: visitGuides.pt.alternative,
         },
       },
       {
@@ -212,7 +213,7 @@ const faqDataMap: Record<Lang, any> = {
         name: '¿El sendero exige esfuerzo físico intenso?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Para nada. Son unos 1,5 km en caminos pavimentados con pendiente suave — accesible a todas las edades y totalmente habilitado para sillas de ruedas.',
+          text: visitGuides.es.alternative,
         },
       },
       {
@@ -258,7 +259,7 @@ const faqDataMap: Record<Lang, any> = {
         name: '步道需要消耗大量体力吗？',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '完全不费力。全程约 1.5 公里，路面平整、坡度平缓，适合所有年龄游客，并且全程无障碍通行。',
+          text: visitGuides.zh.alternative,
         },
       },
       {
@@ -304,7 +305,7 @@ const faqDataMap: Record<Lang, any> = {
         name: '산책로가 힘든가요?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '전혀 아닙니다. 포장된 완만한 길 약 1.5km로 모든 연령이 편하게 걸을 수 있으며 휠체어도 완전히 이용 가능합니다.',
+          text: visitGuides.ko.alternative,
         },
       },
       {

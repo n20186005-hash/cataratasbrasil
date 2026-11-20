@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://cataratasbrasil.com',
   i18n: {
     defaultLocale: 'pt',
-    locales: ['zh', 'en', 'es', 'pt'],
+    locales: ['zh', 'en', 'es', 'pt', 'ko'],
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: false,
