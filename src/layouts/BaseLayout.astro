@@ -13,7 +13,8 @@ interface Props {
 }
 const { lang, title, description, noindex = false, image = '/gallery/trilha-das-cataratas-brasil (6).jpg', availableLangs = LANGUAGES } = Astro.props;
 const socialImage = new URL(image, Astro.site).href;
-const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const localizedPath = Astro.url.pathname === '/' ? `/${lang}/` : Astro.url.pathname;
+const canonical = new URL(localizedPath, Astro.site).href;
 
 const HREFLANG: Record<Lang, string> = { zh: 'zh-CN', en: 'en', es: 'es', pt: 'pt-BR', ko: 'ko' };
 const OG_LOCALE: Record<Lang, string> = { zh: 'zh_CN', en: 'en_US', es: 'es_ES', pt: 'pt_BR', ko: 'ko_KR' };
@@ -28,10 +29,10 @@ function withLang(pathname: string, from: Lang, to: Lang): string {
 
 // Alternate language versions that actually exist for this page.
 const alternates = availableLangs
-  .map((l) => ({ code: HREFLANG[l], href: new URL(withLang(Astro.url.pathname, lang, l), Astro.site).href }));
+  .map((l) => ({ code: HREFLANG[l], href: new URL(withLang(localizedPath, lang, l), Astro.site).href }));
 
 // x-default points to the default-language (pt) version of the same page.
-const xDefault = new URL(withLang(Astro.url.pathname, lang, 'pt'), Astro.site).href;
+const xDefault = new URL(withLang(localizedPath, lang, 'pt'), Astro.site).href;
 ---
 <!DOCTYPE html>
 <html lang={HREFLANG[lang]}>

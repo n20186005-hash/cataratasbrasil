@@ -1,0 +1,65 @@
+---
+import type { Lang } from '../i18n/utils';
+import { trailSlug, viewpointSlug, visitGuides } from '../i18n/visit-guides';
+import { t, meta } from '../i18n/translations';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import Marquee from './Marquee.astro';
+import Manifesto from './Manifesto.astro';
+import Highlights from './Highlights.astro';
+import PracticalInfo from './PracticalInfo.astro';
+import Transport from './Transport.astro';
+import Encyclopedia from './Encyclopedia.astro';
+import Ecology from './Ecology.astro';
+import Gallery from './Gallery.astro';
+import Reviews from './Reviews.astro';
+import ExploreDirectory from './ExploreDirectory.astro';
+import Surrounding from './Surrounding.astro';
+import Faq from './Faq.astro';
+import LeaveNoTrace from './LeaveNoTrace.astro';
+import Footer from './Footer.astro';
+import StructuredData from './StructuredData.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
+const title = _(meta.title);
+const desc = _(meta.description);
+const guides = visitGuides[lang];
+---
+<BaseLayout lang={lang} title={title} description={desc}>
+  <Nav lang={lang} />
+  <Hero lang={lang} />
+  <Marquee lang={lang} />
+  <Manifesto lang={lang} />
+  <Highlights lang={lang} />
+  <PracticalInfo lang={lang} />
+  <Transport lang={lang} />
+  <section id="visit-guides" class="bg-[color:var(--color-cream)] py-16 scroll-mt-16">
+    <div class="container mx-auto max-w-5xl px-6">
+      <h2 class="section-title text-center">{guides.heading}</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        {[[trailSlug, guides.trail, guides.trailIntro], [viewpointSlug, guides.viewpoint, guides.viewpointIntro]].map(([slug, heading, intro]) => (
+          <article class="rounded-3xl bg-white border border-black/5 p-6">
+            <h3 class="font-display text-2xl"><a class="link-underline" href={`/${lang}/${slug}/`}>{heading} →</a></h3>
+            <p class="mt-3 text-[color:var(--color-moss)]">{intro}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <Encyclopedia lang={lang} />
+  <Ecology lang={lang} />
+  <Gallery lang={lang} />
+  <Reviews lang={lang} />
+  <Surrounding lang={lang} />
+  <ExploreDirectory lang={lang} />
+  <LeaveNoTrace lang={lang} />
+  <Faq lang={lang} />
+  <Footer lang={lang} />
+  <StructuredData lang={lang} />
+</BaseLayout>
