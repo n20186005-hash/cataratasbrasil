@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TravelPageHero from '../../../components/TravelPageHero.astro';
 import Nav from '../../../components/Nav.astro';
 import Footer from '../../../components/Footer.astro';
 import { explorePlaces, localizedExplorePlace } from '../../../i18n/explore';
@@ -42,23 +43,16 @@ const schema = {
 <BaseLayout lang={lang} title={title} description={place.background} image={image}>
   <Nav lang={lang} languageSuffix={`explore/${place.slug}/`} />
   <main>
-    <header class="relative min-h-[68vh] flex items-end pt-24 bg-[color:var(--color-ink)] text-white overflow-hidden">
-      <img class="absolute inset-0 w-full h-full object-cover" src={image} alt={place.name} fetchpriority="high" />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-      <div class="relative max-w-7xl mx-auto px-6 pb-12 w-full">
-        <a class="link-underline" href={`/${lang}/#explore`}>{t('directory')}</a>
-        <h1 class="font-display text-4xl md:text-6xl max-w-4xl mt-4">{place.name}</h1>
-        <p class="mt-4 max-w-2xl text-lg">{place.tagline}</p>
+    <TravelPageHero title={place.name} description={place.tagline} image={image}
+      backHref={`/${lang}/#explore`} backLabel={t('directory')} mapHref={map} mapLabel={t('map')}>
         {(rating || place.hours) && (
-          <ul class="mt-4 flex max-w-2xl flex-wrap gap-x-5 gap-y-2 text-sm text-white/90">
-            {rating && <li><a class="link-underline" href="#avaliacoes">{rating}</a></li>}
-            {place.hours && <li><a class="link-underline" href="#horarios">{place.hours}</a></li>}
+          <ul class="mt-4 flex max-w-2xl flex-wrap gap-2 text-sm text-white/90">
+            {rating && <li><a class="chip inline-block rounded-full bg-white/10 px-3 py-1.5 hover:bg-white/20" href="#avaliacoes">{rating}</a></li>}
+            {place.hours && <li><a class="chip inline-block rounded-full bg-white/10 px-3 py-1.5 hover:bg-white/20" href="#horarios">{place.hours}</a></li>}
           </ul>
         )}
-        <a class="inline-block mt-6 rounded-full bg-[color:var(--color-sun)] text-[color:var(--color-ink)] font-bold px-5 py-3" href={map}>{t('map')} ↗</a>
-      </div>
-    </header>
-    <div class="max-w-4xl mx-auto px-6 py-14 space-y-10 text-[color:var(--color-moss)]">
+    </TravelPageHero>
+    <div class="travel-content travel-sections">
       <section class="space-y-3">
         <h2 class="font-display text-3xl text-[color:var(--color-ink)]">{placeLabel('discover')}</h2>
         <p>{place.tagline}{lang === "zh" ? "。" : "."}</p>
@@ -74,7 +68,7 @@ const schema = {
       </section>
       <section id="informacoes" class="space-y-4 scroll-mt-20">
         <h2 class="font-display text-3xl text-[color:var(--color-ink)]">{t('info')}</h2>
-        <dl class="rounded-2xl bg-[color:var(--color-mist)] p-6 space-y-4">
+        <dl class="travel-facts">
           <div><dt class="font-bold">{t('address')}</dt><dd lang={place.addressLang}>{place.address}</dd></div>
           <div><dt class="font-bold">{t('city')}</dt><dd>{place.city}</dd></div>
           <div><dt class="font-bold">{t('type')}</dt><dd>{t(place.category)}</dd></div>
@@ -126,7 +120,7 @@ const schema = {
       <section class="space-y-3">
         <h2 class="font-display text-3xl text-[color:var(--color-ink)]">{t('faq')}</h2>
         {[[place.question, place.answer], [place.extraQuestion, place.extraAnswer]].map(([question, answer]) => (
-          <details class="rounded-2xl border border-black/10 p-6">
+          <details class="rounded-2xl bg-mist p-5">
             <summary class="cursor-pointer font-bold">{question}</summary>
             <p class="mt-3">{answer}</p>
           </details>
@@ -136,7 +130,7 @@ const schema = {
         <h2 class="font-display text-3xl text-[color:var(--color-ink)]">{t('stay')}</h2>
         <p>{place.stay}</p>
       </section>
-      <section id="avaliacoes" class="rounded-2xl bg-[color:var(--color-mist)] p-6 space-y-3 scroll-mt-20">
+      <section id="avaliacoes" class="travel-reviews space-y-3">
         <h2 class="font-display text-2xl text-[color:var(--color-ink)]">{t('visitorReviews')}</h2>
         {rating && <p>
           <strong>{rating}</strong>
@@ -147,7 +141,7 @@ const schema = {
       <section class="space-y-3">
         <h2 class="font-display text-3xl text-[color:var(--color-ink)]">{t('mapSection')}</h2>
         <p lang={place.addressLang}>{place.address}</p>
-        <a class="link-underline" href={map}>{t('mapLink')} ↗</a>
+        <a class="travel-map-button" href={map}>{t('mapLink')} ↗</a>
       </section>
       <section class="space-y-3">
         <h2 class="font-display text-2xl text-[color:var(--color-ink)]">{t('related')}</h2>

@@ -31,3 +31,56 @@ details[open] .faq-plus { transform: rotate(45deg); }
 /* Partner links */
 .partner-abbr { font-variant: small-caps; letter-spacing: 0.15em; }
 .partner-link:hover .partner-name { opacity: 1; transform: translateY(4px); }
+
+.travel-content {
+  @apply mx-auto grid max-w-6xl gap-5 px-6 py-12 leading-relaxed text-moss md:py-20;
+}
+
+.travel-sections {
+  @apply items-start md:grid-cols-2;
+}
+
+.travel-panel,
+.travel-sections > section {
+  @apply min-w-0 rounded-3xl border border-ink/10 bg-white p-6 sm:p-8;
+}
+
+.travel-sections > section:nth-child(-n+3),
+.travel-sections > section:has(details),
+.travel-sections > section:last-child {
+  @apply md:col-span-2;
+}
+
+.travel-sections > section:nth-child(2),
+.travel-panel.travel-reviews,
+.travel-sections > .travel-reviews {
+  @apply bg-mist;
+}
+
+.travel-content h2 {
+  @apply leading-tight;
+}
+
+.travel-content [id] {
+  @apply scroll-mt-24;
+}
+
+.travel-facts {
+  @apply grid gap-3 rounded-2xl bg-mist p-4 sm:grid-cols-2 sm:p-5;
+}
+
+.travel-facts > div {
+  @apply min-w-0 rounded-xl bg-white px-4 py-3 [overflow-wrap:anywhere];
+}
+
+.travel-facts dt {
+  @apply text-sm text-emerald;
+}
+
+.travel-map-button {
+  @apply mt-3 inline-flex rounded-full bg-sun px-5 py-2.5 font-semibold text-ink hover:bg-mist;
+}
+
+.travel-legal-header {
+  @apply my-8 rounded-3xl bg-moss p-6 text-white sm:p-10;
+}

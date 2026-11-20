@@ -1,7 +1,7 @@
 ---
 import '../../../src/styles/global.css';
 import { LANGUAGES, type Lang } from '../../i18n/utils';
-import { t, privacy, footer } from '../../i18n/translations';
+import { t, privacy, terms } from '../../i18n/translations';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
@@ -14,10 +14,12 @@ const lang = Astro.params.lang as Lang;
 const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
 ---
 <BaseLayout lang={lang} title={_(privacy.title)} description={_(privacy.title)} noindex>
-  <Nav lang={lang} />
-  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="font-display text-4xl md:text-5xl mt-10 mb-4">{_(privacy.h1)}</h1>
-    <p class="text-sm text-[color:var(--color-moss)]/60 mb-10">{_(privacy.lastUpdated)}</p>
+  <Nav lang={lang} languageSuffix="privacy/" />
+  <main class="travel-legal mx-auto max-w-3xl px-6 pt-24 pb-16">
+    <header class="travel-legal-header grain">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">{_(privacy.h1)}</h1>
+      <p class="text-sm text-white/85">{_(privacy.lastUpdated)}</p>
+    </header>
 
     <section class="space-y-10 text-[color:var(--color-moss)] leading-relaxed">
       <div>
@@ -39,7 +41,7 @@ const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
     </section>
 
     <div class="mt-16 pt-8 border-t border-black/10">
-      <a href={`/${lang}/`} class="link-underline text-[color:var(--color-emerald)]">← {_(footer.privacy)} — {lang === 'zh' ? '返回首页' : lang === 'pt' ? 'Voltar ao início' : lang === 'es' ? 'Volver al inicio' : 'Back to home'}</a>
+      <a href={`/${lang}/`} class="link-underline text-[color:var(--color-emerald)]">{_(terms.backLink)}</a>
     </div>
   </main>
   <Footer lang={lang} />

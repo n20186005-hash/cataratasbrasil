@@ -14,10 +14,12 @@ const lang = Astro.params.lang as Lang;
 const _ = (value: Parameters<typeof t>[0]) => t(value, lang);
 ---
 <BaseLayout lang={lang} title={_(cookies.title)} description={_(cookies.title)} noindex>
-  <Nav lang={lang} />
-  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="font-display text-4xl md:text-5xl mt-10 mb-4">{_(cookies.h1)}</h1>
-    <p class="text-sm text-[color:var(--color-moss)]/60 mb-10">{_(cookies.lastUpdated)}</p>
+  <Nav lang={lang} languageSuffix="cookies/" />
+  <main class="travel-legal mx-auto max-w-3xl px-6 pt-24 pb-16">
+    <header class="travel-legal-header grain">
+      <h1 class="font-display text-4xl md:text-5xl mb-4">{_(cookies.h1)}</h1>
+      <p class="text-sm text-white/85">{_(cookies.lastUpdated)}</p>
+    </header>
 
     <p class="text-[color:var(--color-moss)] mb-10 leading-relaxed">{_(cookies.intro)}</p>
 
